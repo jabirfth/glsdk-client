@@ -38,8 +38,19 @@ mat-sidenav-container {
     justify-content: start;
     height: 132px;
     padding-left: 16px;
+    padding-right: 16px;
 
     border-bottom: 1px solid rgba(black, 0.12);
+
+    a {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
