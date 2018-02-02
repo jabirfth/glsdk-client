@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AppComponent } from './app.component';
@@ -61,6 +62,7 @@ import { UserService } from './services/user.service';
 import { UsersComponent } from './components/authentication/users/users.component';
 import { UserFormComponent } from './components/authentication/user-form/user-form.component';
 import { RoleService } from './services/role.service';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -103,6 +105,7 @@ import { RoleService } from './services/role.service';
     HttpClientModule,
     ReactiveFormsModule,
     SDKBrowserModule.forRoot(),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     AgentRankService,
