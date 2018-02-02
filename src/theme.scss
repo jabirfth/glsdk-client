@@ -3,10 +3,13 @@
 @include mat-core();
 
 // Importer la palette personnalisée.
-@import '~theming/palette';
+@import 'theming/palette-grandlyon';
+//@import 'theming/palette-cleverage';  // customize
 
 // Déclaration du nouveau thème.
 $app-theme-primary: mat-palette($app-vermilion);
+//$app-theme-primary: mat-palette($md-clevergarden);  // customize
+
 $app-theme-accent:  mat-palette($app-woodsmoke);
 $app-theme-warn:    mat-palette($app-woodsmoke);
 

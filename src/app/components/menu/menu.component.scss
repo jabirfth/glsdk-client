@@ -1,10 +1,4 @@
-// TODO: gérer les variables du thème plus efficacement afin d'éviter de répéter
-//       la création des variables.
-@import '~@angular/material/theming';
-@import '~theming/palette';
-
-$app-theme-primary: mat-palette($app-vermilion);
-$app-primary: mat-color($app-theme-primary);
+@import '../../../theme';
 
 .Menu-subDivider {
 
