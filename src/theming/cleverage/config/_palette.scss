@@ -1,7 +1,7 @@
 /* Sample of another Palette for Clever Age color */
 /* generated via http://mcg.mbitson.com/ */
 
-$md-cleverforge: (
+$ca-forge: (
   50 : #beebff,
   100 : #72d4ff,
   200 : #3ac3ff,
@@ -34,7 +34,7 @@ $md-cleverforge: (
   )
 );
 
-$md-clevergarden: (
+$ca-garden: (
   50 : #dbf5a5,
   100 : #bfee60,
   200 : #aae92d,
@@ -67,7 +67,7 @@ $md-clevergarden: (
   )
 );
 
-$md-cleverpresence: (
+$ca-presence: (
   50 : #ffe6df,
   100 : #ffac93,
   200 : #ff805b,
@@ -100,5 +100,27 @@ $md-cleverpresence: (
   )
 );
 
+// Puisque le projet utilise des couleurs spécifiques (voir le thème grandlyon),
+// il est obligatoire de les déclarer également ici sous peine de lever des
+// exceptions lors de l'usage de la fonction `mat-color()`.
+//
+// Dans l'exemple qui suit, la couleur spécifique "form" est utilisée :
+//
+//     .form-container {
+//       background-color: mat-color($background, form);
+//     }
 
+// Palette des couleurs d'arrière plan spécifique au thème clair.
+$ca-light-theme-background: (
+  // spécifiques
+  actived-navigation: #f0f0f0,
+  form: rgba(220, 220, 220, 0.4),
+  table-header: #d3d3d3,
+);
 
+// Palette des couleurs de premier plan spécifique au thème clair.
+$ca-light-theme-foreground: (
+  // spécifiques
+  valid:   #4caf50,
+  invalid: #d32f2f,
+);

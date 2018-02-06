@@ -1,26 +1,25 @@
-// Création d'un thème personnalisé.
+// Charger les outils Material Design
 @import '~@angular/material/theming';
+
+// Charger les mixins de theming des composants
+@import 'theming/all-theme';
+
+// Charger le thème principal
+@import 'theming/grandlyon/grandlyon';
+
+// Le mixin `mat-core()` ne doit être appélé qu'une seule fois puisqu'il génère
+// des styles CSS.
+// TODO: passer en argument la configuration typographique.
 @include mat-core();
 
-// Importer la palette personnalisée.
-@import 'theming/palette-grandlyon';
-//@import 'theming/palette-cleverage';  // customize
+@include angular-material-theme($gl-theme);
+@include app-theme($gl-theme);
 
-// Déclaration du nouveau thème.
-$app-theme-primary: mat-palette($app-vermilion);
-//$app-theme-primary: mat-palette($md-clevergarden);  // customize
+// DEMO: charger le thème alternatif "cleverage".
+@import 'theming/cleverage/cleverage';
 
-$app-theme-accent:  mat-palette($app-woodsmoke);
-$app-theme-warn:    mat-palette($app-woodsmoke);
-
-$app-theme: mat-light-theme($app-theme-primary, $app-theme-accent, $app-theme-warn);
-
-// Inclure les styles de tous les composants.
-@include angular-material-theme($app-theme);
-
-// Exposer les couleurs principales du thème.
-$app-primary: mat-color($app-theme-primary);
-$app-accent:  mat-color($app-theme-accent);
-$app-warn:    mat-color($app-theme-warn);
-$app-md-invalid-color: #d32f2f;
-$app-md-valid-color: #4caf50;
+// Ajoutez la classe "theme-ca" au body pour appliquer le thème alternatif.
+.theme-ca {
+  @include angular-material-theme($ca-theme);
+  @include app-theme($ca-theme);
+}

@@ -1,0 +1,14 @@
+table {
+  min-width: 800px;
+  width: 100%;
+
+  @media screen and (max-width: 1200px) {
+    min-width: inherit;
+    width: 100%;
+  }
+}
+
+.mat-calendar-table {
+  min-width: 100%;
+}
+

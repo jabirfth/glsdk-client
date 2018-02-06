@@ -1,6 +1,3 @@
-@import '~theming/layout';
-@import 'theme';
-
 html,
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9,24 +6,9 @@ body {
   height: 100%;
 }
 
-a {
-  color: $app-primary;
-}
-
-.AppLoader {
-  @extend %l-flexContainer;
-
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-
-  background: #fff;
-
-  img {
-    width: 60%;
-  }
-}
+@import '~theming/shared/layout';
+@import "~theming/shared/loader";
+@import "~theming/shared/table";
 
 h1, h2, h3 {
   font-size: 2em;
@@ -107,44 +89,8 @@ app-agent {
   height: auto;
 }
 
-/* global design for table */
-
-table {
-  min-width: 800px;
-  width: 100%;
-}
-
-th {
-  background-color: lightgray;
-}
-
-.mat-calendar-table {
-  min-width: 100%;
-}
-
-form {
-  .ng-valid {
-    color: $app-md-valid-color !important;
-  }
-  .ng-valid .mat-form-field-underline{
-    background-color: $app-md-valid-color !important;
-  }
-  .ng-invalid {
-    color: $app-md-invalid-color !important;
-  }
-  .ng-invalid .mat-form-field-underline {
-    background-color: $app-md-invalid-color !important;
-  }
-}
 
 /* responsive */
-
-@media screen and (max-width: 1200px) {
-  table {
-    min-width: inherit;
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 640px) {
   app-city-form,

@@ -1,0 +1,89 @@
+// Color palettes for Grand Lyon, la Métropole
+//
+// Generator:
+// http://mcg.mbitson.com/#!?vermilion=%23e10000&woodsmoke=%23050707&themename=grandlyon
+
+$gl-dark-primary-text: black;
+$gl-light-primary-text: white;
+
+$gl-vermilion: (
+    50:   #ffebeb,
+    100:  #ff9f9f,
+    200:  #ff6767,
+    300:  #ff1f1f,
+    400:  #ff0101,
+    500:  #e10000,
+    600:  #c20000,
+    700:  #a40000,
+    800:  #850000,
+    900:  #670000,
+    A100: #ffe1e1,
+    A200: #ff7b7b,
+    A400: #ff1515,
+    A700: #fa0000,
+    contrast: (
+        50:   $gl-dark-primary-text,
+        100:  $gl-dark-primary-text,
+        200:  $gl-dark-primary-text,
+        300:  $gl-light-primary-text,
+        400:  $gl-light-primary-text,
+        500:  $gl-light-primary-text,
+        600:  $gl-light-primary-text,
+        700:  $gl-light-primary-text,
+        800:  $gl-light-primary-text,
+        900:  $gl-light-primary-text,
+        A100: $gl-dark-primary-text,
+        A200: $gl-dark-primary-text,
+        A400: $gl-light-primary-text,
+        A700: $gl-light-primary-text,
+    )
+);
+
+$gl-woodsmoke: (
+    50:   #e1e1e1,
+    100:  #b4b5b5,
+    200:  #828383,
+    300:  #505151,
+    400:  #2b2c2c,
+    500:  #050707,
+    600:  #040606,
+    700:  #040505,
+    800:  #030404,
+    900:  #010202,
+    A100: #a6a6a6,
+    A200: #8c8c8c,
+    A400: #737373,
+    A700: #666666,
+    contrast: (
+        50:   $gl-dark-primary-text,
+        100:  $gl-dark-primary-text,
+        200:  $gl-dark-primary-text,
+        300:  $gl-light-primary-text,
+        400:  $gl-light-primary-text,
+        500:  $gl-light-primary-text,
+        600:  $gl-light-primary-text,
+        700:  $gl-light-primary-text,
+        800:  $gl-light-primary-text,
+        900:  $gl-light-primary-text,
+        A100: $gl-dark-primary-text,
+        A200: $gl-dark-primary-text,
+        A400: $gl-light-primary-text,
+        A700: $gl-light-primary-text,
+    )
+);
+
+// Palette des couleurs d'arrière plan spécifique au thème clair.
+$gl-light-theme-background: (
+  // spécifiques
+  actived-navigation: #f0f0f0,
+  form: rgba(220, 220, 220, 0.4),
+  table-header: #d3d3d3,
+);
+
+// Palette des couleurs de premier plan spécifique au thème clair.
+$gl-light-theme-foreground: (
+  // spécifiques
+  valid:   #4caf50,
+  invalid: #d32f2f,
+);
+

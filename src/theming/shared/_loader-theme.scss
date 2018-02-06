@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+@mixin app-shared-loader-theme($theme) {
+  $background: map-get($theme, background);
+
+  .AppLoader {
+    background: mat-color($background, background);
+  }
+}
+

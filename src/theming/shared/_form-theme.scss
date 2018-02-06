@@ -1,0 +1,32 @@
+@import '~@angular/material/theming';
+
+@mixin app-shared-form-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  form {
+    .ng-valid {
+      color: mat-color($foreground, valid);
+
+      .mat-form-field-underline {
+        background-color: mat-color($foreground, valid);
+      }
+    }
+
+    .ng-invalid {
+      color: mat-color($foreground, invalid);
+
+      .mat-form-field-underline {
+        background-color: mat-color($foreground, invalid);
+      }
+    }
+  }
+
+  .form-container {
+    @include mat-elevation(2);
+
+    background-color: mat-color($background, form);
+  }
+
+}
+

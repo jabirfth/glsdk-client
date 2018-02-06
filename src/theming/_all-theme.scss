@@ -1,0 +1,29 @@
+@mixin app-theme($theme) {
+  @include app-shared-theme($theme);
+  @include app-components-theme($theme);
+}
+
+// Theming des éléments transverses
+
+@import "shared/form-theme";
+@import "shared/loader-theme";
+@import "shared/table-theme";
+
+@mixin app-shared-theme($theme) {
+  @include app-shared-form-theme($theme);
+  @include app-shared-loader-theme($theme);
+  @include app-shared-table-theme($theme);
+}
+
+// Theming des composants Angular
+
+@import "~app/app-theme.component";
+@import "~app/components/menu/menu-theme.component";
+@import "~app/components/federal/welcome/welcome-theme.component";
+
+@mixin app-components-theme($theme) {
+  @include app-app-theme($theme);
+  @include app-menu-theme($theme);
+  @include app-welcome-theme($theme);
+}
+

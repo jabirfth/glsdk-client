@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@mixin app-shared-table-theme($theme) {
+  $background: map-get($theme, background);
+
+  th {
+    background-color: mat-color($background, table-header);
+  }
+}
