@@ -1,0 +1,40 @@
+.buttons {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buttons > button {
+  display: flex;
+  width: auto;
+}
+
+.buttons > p {
+  margin: 0 15px;
+}
+
+h4 {
+  margin: 0;
+}
+
+section > mat-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.label {
+  font-size: 12px;
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.roads {
+  max-width: none;
+}
+
+.roads h3 {
+  text-align: center;
+}

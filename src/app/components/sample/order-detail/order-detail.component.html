@@ -1,0 +1,38 @@
+<ng-container *ngIf="order">
+
+  <button mat-button routerLink="/orders" style="margin:1em">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <span i18n>Return to Orders</span>
+  </button>
+
+
+  <mat-card>
+    <mat-card-title>
+      Order : {{ order.name }}
+    </mat-card-title>
+    <mat-card-content>
+      <p><span i18n="@@input.placeholder.amount">montant</span> : {{ order.amount }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <mat-card>
+    <mat-card-title>
+      Contributions
+    </mat-card-title>
+    <mat-card-content>
+      <app-order-contributions [order]="order"></app-order-contributions>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>
+      Ajouter une contribution
+    </mat-card-title>
+    <mat-card-content>
+      <app-order-contributions-form [order]="order"></app-order-contributions-form>
+    </mat-card-content>
+  </mat-card>
+
+</ng-container>

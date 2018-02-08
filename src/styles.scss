@@ -1,0 +1,150 @@
+@import '~theming/layout';
+@import 'theme';
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.AppLoader {
+  @extend %l-flexContainer;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  background: #fff;
+
+  img {
+    width: 60%;
+  }
+}
+
+h1, h2, h3 {
+  font-size: 2em;
+  font-weight: 700;
+  padding-left: 0.5em;
+  margin: 0;
+  flex: 1;
+}
+
+.gl-list-header {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.gl-filters {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em 0;
+}
+
+.gl-filters mat-form-field {
+  padding: 0 1em;
+}
+
+mat-card {
+  margin: 1em;
+}
+
+.l-flexSpacer {
+  flex: 1 1 auto;
+}
+
+.l-flexContainer {
+  @extend %l-flexContainer;
+}
+
+.l-flexCentered {
+  margin: auto;
+}
+
+.l-fillHeight {
+  min-height: 100%;
+  flex-direction: column;
+
+  &, &.mat-drawer-content {
+    display: flex;
+  }
+}
+
+.mat-sidenav-content > * {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mat-toolbar {
+  flex: 0 0 auto;
+}
+
+.u-routerContainer {
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 20px;
+}
+
+app-storage,
+app-city,
+app-agent {
+  justify-content: flex-start;
+}
+
+app-storage,
+app-agent {
+  height: auto;
+}
+
+/* global design for table */
+
+table {
+  min-width: 800px;
+  width: 100%;
+}
+
+th {
+  background-color: lightgray;
+}
+
+.mat-calendar-table {
+  min-width: 100%;
+}
+
+form {
+  .ng-valid {
+    color: $app-md-valid-color !important;
+  }
+  .ng-valid .mat-form-field-underline{
+    background-color: $app-md-valid-color !important;
+  }
+  .ng-invalid {
+    color: $app-md-invalid-color !important;
+  }
+  .ng-invalid .mat-form-field-underline {
+    background-color: $app-md-invalid-color !important;
+  }
+}
+
+/* responsive */
+
+@media screen and (max-width: 1200px) {
+  table {
+    min-width: inherit;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  app-city-form,
+  app-road-form {
+    display: initial;
+  }
+}

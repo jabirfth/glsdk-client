@@ -1,0 +1,65 @@
+<div class="gl-list-header">
+  <button mat-button routerLink="/users">
+    <mat-icon>arrow_back</mat-icon>
+    <ng-container i18n="@@global.back">Back</ng-container>
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+<div class="gl-content">
+  <mat-card>
+    <form #userForm="ngForm" class="form-container" (submit)="createOrUpdateUser()" >
+      <mat-card-content>
+        <div>
+          <mat-form-field color="warm">
+            <input
+              matInput
+              name="username"
+              type="text"
+              [(ngModel)]="user.username"
+              placeholder="username"
+              required
+              i18n-placeholder="@@input.placeholder.username"
+            >
+          </mat-form-field>
+          <mat-form-field color="warm">
+            <input
+              matInput
+              name="email"
+              type="text"
+              [(ngModel)]="user.email"
+              placeholder="email"
+              required
+              email
+              i18n-placeholder="@@input.placeholder.email"
+            >
+          </mat-form-field>
+          <mat-form-field color="warm">
+            <input
+              matInput
+              name="password"
+              type="password"
+              [(ngModel)]="user.password"
+              placeholder="password"
+              required
+              i18n-placeholder="@@input.placeholder.password"
+            >
+          </mat-form-field>
+          <ul>
+            <li *ngFor="let role of roles | async">
+              <mat-checkbox name="roles" (change)="updateRoles(role, $event.checked)">{{role.name}}</mat-checkbox>
+            </li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          type="submit"
+          color="warn"
+          [disabled]="userForm.form.invalid"
+          i18n="@@input.save">Save</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

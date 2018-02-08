@@ -1,0 +1,27 @@
+// TODO: gérer les variables du thème plus efficacement afin d'éviter de répéter
+//       la création des variables.
+@import '~@angular/material/theming';
+@import '~theming/palette';
+
+$app-theme-primary: mat-palette($app-vermilion);
+$app-primary: mat-color($app-theme-primary);
+
+.Menu-subDivider {
+
+  &.mat-divider {
+    width: 49px;
+  }
+}
+
+.mat-list-item {
+
+  &.active {
+    background-color: #f0f0f0; // TODO: utiliser la palette
+    box-shadow: 0 -4px 4px -4px inset rgba(black, 0.2), 0 4px 4px -4px inset rgba(black, 0.2);
+
+    .mat-list-icon {
+      color: $app-primary;
+    }
+  }
+}
+

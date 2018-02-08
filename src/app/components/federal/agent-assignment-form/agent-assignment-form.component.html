@@ -1,0 +1,81 @@
+<section>
+<form class="form-container" [formGroup]="form" (submit)="createOrUpdateAgentAssignment()" >
+  <div>
+    <mat-form-field color="warn">
+      <input
+        name="rankControl"
+        type="text"
+        placeholder="Rank"
+        matInput
+        formControlName="rank"
+        [matAutocomplete]="autoRank"
+        (keyup)="searchAgentRanks($event)"
+        (blur)="validateRankControl()"
+        required
+        i18n-placeholder="@@input.placeholder.rank"
+      >
+      <mat-autocomplete #autoRank="matAutocomplete" [displayWith]="displayRankValue">
+        <mat-option *ngFor="let rank of ranks | async" [value]="rank">
+          {{ rank.label }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="warn">
+      <input
+        type="text"
+        placeholder="Department"
+        matInput
+        formControlName="department"
+        [matAutocomplete]="autoDepartment"
+        (keyup)="searchDepartments($event)"
+        (blur)="validateDepartmentControl()"
+        required
+        i18n-placeholder="@@input.placeholder.department"
+      >
+      <mat-autocomplete #autoDepartment="matAutocomplete" [displayWith]="displayDepartmentValue">
+        <mat-option *ngFor="let department of departments | async" [value]="department">
+          {{ department.label }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="warn">
+      <input
+        matInput
+        required
+        formControlName="beginDate"
+        [matDatepicker]="beginDatePicker"
+        placeholder="Choose a begin date"
+        i18n-placeholder="@@input.placeholder.begindate"
+      >
+      <mat-datepicker-toggle matSuffix [for]="beginDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #beginDatePicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="warn">
+      <input
+        matInput
+        [min]="form.controls.beginDate.value"
+        formControlName="endDate"
+        [matDatepicker]="endDatePicker"
+        placeholder="Choose an end date"
+        i18n-placeholder="@@input.placeholder.enddate"
+      >
+      <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+      <mat-datepicker #endDatePicker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <button
+    mat-raised-button
+    type="submit"
+    color="warn"
+    [disabled]="form.invalid"
+    i18n="@@input.save"
+  >Save</button>
+</form>
+</section>

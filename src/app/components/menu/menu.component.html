@@ -1,0 +1,75 @@
+<mat-nav-list>
+
+  <ng-container *ngIf="authGuard.canActivate() | async">
+
+    <h3 mat-subheader i18n="@@nav.cities">Cities</h3>
+    <mat-list-item routerLink="/cities" routerLinkActive="active">
+      <mat-icon mat-list-icon>location_city</mat-icon>
+      <a mat-line i18n="@@nav.displayCities">Display cities</a>
+    </mat-list-item>
+
+    <mat-list-item routerLink="/roads" routerLinkActive="active">
+      <mat-icon mat-list-icon>directions_car</mat-icon>
+      <a mat-line i18n="@@nav.displayRoads">Display roads</a>
+    </mat-list-item>
+
+    <ng-container *ngIf="adminGuard.canActivate() | async">
+      <mat-list-item routerLink="/roads/new" routerLinkActive="active">
+        <mat-icon mat-list-icon>add</mat-icon>
+        <a mat-line i18n="@@nav.addRoad">Add new road</a>
+      </mat-list-item>
+    </ng-container>
+
+    <ng-container *ngIf="adminGuard.canActivate() | async">
+      <mat-divider></mat-divider>
+      <h3 mat-subheader i18n="@@nav.users">Users</h3>
+      <mat-list-item routerLink="/users" routerLinkActive="active">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <a mat-line i18n="@@nav.users">Users</a>
+      </mat-list-item>
+    </ng-container>
+
+    <mat-divider></mat-divider>
+
+    <ng-container *ngIf="agentGuard.canActivate() | async">
+
+      <h3 mat-subheader i18n="@@nav.agents">Agents</h3>
+      <mat-list-item routerLink="/agents" routerLinkActive="active">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <a mat-line i18n="@@nav.agentsAssignations">Agents assignations</a>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/departments" routerLinkActive="active">
+        <mat-icon mat-list-icon>people</mat-icon>
+        <a mat-line i18n="@@nav.displayDepartments">Display departments</a>
+      </mat-list-item>
+
+      <mat-divider></mat-divider>
+
+      <h3 mat-subheader i18n="@@nav.orders">Orders</h3>
+      <mat-list-item routerLink="/orders" routerLinkActive="active">
+        <mat-icon mat-list-icon>shopping_cart</mat-icon>
+        <a mat-line i18n="@@nav.createOrder">Create new order</a>
+      </mat-list-item>
+    </ng-container>
+
+    <ng-container *ngIf="agentGuard.canActivate() | async">
+      <mat-divider></mat-divider>
+
+      <h3 mat-subheader i18n="@@nav.filesExplorer">Files explorer</h3>
+      <mat-list-item routerLink="/storage" routerLinkActive="active">
+        <mat-icon mat-list-icon>find_in_page</mat-icon>
+        <a mat-line i18n="@@nav.findFile">Find a file</a>
+      </mat-list-item>
+    </ng-container>
+
+  </ng-container>
+
+  <mat-divider></mat-divider>
+  <h3 mat-subheader i18n="@@nav.switchLanguage">Change language</h3>
+  <mat-list-item (click)="changeLanguage()">
+    <mat-icon mat-list-icon>language</mat-icon>
+    <a mat-line i18n="@@nav.otherLanguage">Français</a>
+  </mat-list-item>
+
+</mat-nav-list>

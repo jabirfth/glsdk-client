@@ -1,0 +1,50 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.agents">Agents</ng-container></h2>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header  i18n="@@global.code">Code</mat-header-cell>
+      <mat-cell *matCellDef="let agent">{{agent.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header  i18n="@@global.firsname">First name</mat-header-cell>
+      <mat-cell *matCellDef="let agent">{{agent.firstName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header  i18n="@@global.lastname">Last name</mat-header-cell>
+      <mat-cell *matCellDef="let agent">{{agent.lastName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header  i18n="@@global.email">E-mail</mat-header-cell>
+      <mat-cell *matCellDef="let agent">{{agent.email}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="center" *matHeaderCellDef  i18n="@@global.actions">Actions</mat-header-cell>
+      <mat-cell class="center"  *matCellDef="let agent">
+        <a mat-raised-button color="warn" href="#" (click)="selectAgent(agent)"  i18n="@@global.view">View</a>
+        <a mat-button color="warn" href="#" (click)="deleteAgent(agent)"  i18n="@@global.delete">Delete</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElement"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions">
+  </mat-paginator>
+
+</section>

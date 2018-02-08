@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GrandLyon</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  </head>
+  <body class="mat-app-background">
+    <app-root>
+      <section class="AppLoader">
+        <img
+          src="assets/img/Logo_GL_couleur.svg"
+          alt="Grand Lyon, la métropole">
+        <mat-progress-spinner
+          [color]="primary"
+          [mode]="indeterminate">
+        </mat-progress-spinner>
+      </section>
+    </app-root>
+  </body>
+</html>

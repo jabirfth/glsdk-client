@@ -1,0 +1,39 @@
+<section>
+<ng-container *ngIf="agent">
+  <h1>{{agent.id}} - {{agent.firstName}} {{agent.lastName}}</h1>
+  <mat-list>
+    <div>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Entrance date: {{agent.entranceDate}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Spinneret: {{agent.spinneret}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Category: {{agent.category}}
+      </mat-list-item>
+    </div>
+    <div>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Status: {{agent.status}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Phone number: {{agent.phoneNumber}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        E-mail: {{agent.email}}
+      </mat-list-item>
+    </div>
+  </mat-list>
+  <mat-divider></mat-divider>
+  <div>
+    <app-agent-assignments [agent]="agent"></app-agent-assignments>
+  </div>
+</ng-container>
+</section>

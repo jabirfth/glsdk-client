@@ -1,0 +1,59 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.users">Users</ng-container> ({{ totalElements }})</h2>
+  <div class="gl-list-header-action">
+    <button *ngIf="adminGuard.canActivate() | async" mat-button routerLink="/users/new">
+      <mat-icon>add</mat-icon>
+      <ng-container i18n="@@global.add">Add</ng-container>
+    </button>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+
+  <div class="gl-filters">
+    <mat-form-field color="warm">
+      <input matInput type="text" placeholder="username"
+        i18n-placeholder="@@input.placeholder.username" [(ngModel)]="usernameFilterExpression">
+    </mat-form-field>
+  </div>
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.username">username</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.username}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.email">email</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{user.email}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="roles">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.roles">roles</mat-header-cell>
+      <mat-cell *matCellDef="let user">{{ displayUserRoles(user) }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="center" *matHeaderCellDef i18n="@@global.actions">Actions</mat-header-cell>
+      <mat-cell *matCellDef="let user" class="center view">
+        <a mat-raised-button color="warn" href="#" [routerLink]="['/users', user.id, 'edit']" i18n="@@global.edit">Edit</a>
+        <a mat-button color="warn" href="#" (click)="deleteUser(user)" i18n="@@global.delete">Delete</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElements"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+
+</section>

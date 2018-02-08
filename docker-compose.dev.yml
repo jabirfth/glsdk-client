@@ -1,0 +1,46 @@
+version: "3.0"
+
+services:
+
+  db:
+    image: mariadb:10.2
+    restart: unless-stopped
+    volumes:
+      - "db-data:/var/lib/mysql"
+    environment:
+      - MYSQL_DATABASE=grandlyon
+      - MYSQL_USER=db_user
+      - MYSQL_PASSWORD=P@ssw0rd
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    restart: unless-stopped
+    environment:
+      - PMA_HOST=db
+    ports:
+      - "8080:80"
+
+  server:
+    image: software-factory.clevertoday.xyz/grandlyon-demo-api
+    restart: unless-stopped
+    volumes:
+      - server-storage:/storage
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    environment:
+      - FEDERAL_DB_HOST=db
+      - FEDERAL_DB_NAME=grandlyon
+      - FEDERAL_DB_USER=db_user
+      - FEDERAL_DB_PASSWORD=P@ssw0rd
+      - AUTH_DB_HOST=db
+      - AUTH_DB_NAME=grandlyon
+      - AUTH_DB_USER=db_user
+      - AUTH_DB_PASSWORD=P@ssw0rd
+      - FILE_STORAGE_PATH=/storage
+
+volumes:
+  db-data:
+  server-storage:

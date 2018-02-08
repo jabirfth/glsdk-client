@@ -1,0 +1,76 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.services">Services</ng-container></h2>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+
+  <div >
+    <mat-form-field color="warn">
+      <input matInput (keyup)="search($event.target.value)" placeholder="Filter label">
+    </mat-form-field>
+  </div>
+
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.id">Id</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="label">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.label">Label</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.label}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="accountant">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.accountant">Accountant</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.accountant}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address1">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.address1">Address 1</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.address1}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="address2">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.address2">Address 2</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.address2}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="postalCode">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.postalCode">Postal code</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.postalCode}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.city">City</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.city}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="phoneNumber">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.phoneNumber">Phone number</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.phoneNumber}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="faxNumber">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.faxNumber">Fax number</mat-header-cell>
+      <mat-cell *matCellDef="let department">{{department.faxNumber}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElement"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+
+</section>
+<a href="#" (click)="export()">Export data</a>

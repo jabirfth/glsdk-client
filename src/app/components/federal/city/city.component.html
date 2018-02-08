@@ -1,0 +1,38 @@
+<ng-container *ngIf="city">
+<section>
+  <h3>{{city.name}}</h3>
+
+  <div class="buttons">
+    <button mat-icon-button color="warn" routerLink="/cities">
+      <mat-icon>keyboard_arrow_left</mat-icon> <span i18n>Return to cities</span>
+    </button>
+    <ng-container *ngIf="canEdit | async">
+      &nbsp;<div i18n="@@global.or">or</div>&nbsp;
+      <button mat-icon-button color="warn" [routerLink]="['/cities', city.code, 'edit']">
+        <span i18n i18n="@@global.editCity">Edit this city</span> <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+    </ng-container>
+  </div>
+
+  <section>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Postal code: {{city.postalCode}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Mayor: {{city.mayorName}}
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon class="label" color="warn">label_outline</mat-icon>
+        Inhabitants: {{city.inhabitants}}
+      </mat-list-item>
+    </mat-list>
+  </section>
+  <section class="roads">
+    <h3 i18n="@@global.cityRoads">City Roads</h3>
+    <app-roads [city]="city"></app-roads>
+  </section>
+</section>
+</ng-container>

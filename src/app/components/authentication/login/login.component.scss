@@ -1,0 +1,34 @@
+.Login {
+  &-title {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  &-or, &-franceconnect {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Login-content {
+    flex-direction: column;
+  }
+}
+
+.form-container {
+  background-color: rgba(220, 220, 220, 0.4);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  padding: 50px;
+  color: #696969;
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+
+button {
+  margin-top: 30px;
+}
+
+article {
+  padding: 50px;
+}

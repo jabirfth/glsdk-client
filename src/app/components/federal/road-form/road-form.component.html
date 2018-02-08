@@ -1,0 +1,51 @@
+<section>
+<form #roadForm="ngForm" class="form-container" (submit)="createOrUpdateRoad()" >
+  <div class="datas">
+    <div class="road-datas">
+      <div *ngIf="isCreate" class="field">
+        <mat-form-field color="warn">
+          <input
+          matInput
+          type="text"
+          name="id"
+          placeholder="Road id"
+          pattern="[0-9]{1,5}"
+          [(ngModel)]="road.id"
+          required
+          i18n-placeholder="@@input.placeholder.roadId">
+        </mat-form-field>
+      </div>
+      <div *ngIf="isCreate" class="field">
+        <mat-form-field color="warn">
+          <input
+          matInput
+          type="text"
+          name="cityCode"
+          placeholder="City code"
+          pattern="[0-9]{1,5}"
+          [(ngModel)]="road.cityCode"
+          required
+          i18n-placeholder="@@input.placeholder.cityCode">
+        </mat-form-field>
+      </div>
+      <mat-form-field color="warn">
+        <input
+        matInput
+        type="text"
+        name="label"
+        placeholder="Road label - uppercase"
+        pattern="[0-9-A-Z\ ]+"
+        [(ngModel)]="road.label"
+        (change)="road.label = road.label.toUpperCase()"
+          i18n-placeholder="@@input.placeholder.roadLabelUppercase">
+      </mat-form-field>
+    </div>
+  </div>
+  <button
+    mat-raised-button
+    type="submit"
+    color="warn"
+    [disabled]="roadForm.form.invalid"
+    i18n="@@global.save">Save</button>
+</form>
+</section>

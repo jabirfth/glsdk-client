@@ -1,0 +1,84 @@
+<section>
+<form #cityForm="ngForm" class="form-container" (submit)="createOrUpdateCity()">
+  <div class="datas">
+    <div class="city-datas">
+      <div *ngIf="isCreate" class="fieldOnCreate">
+        <mat-form-field color="warn">
+          <input
+          #code
+          matInput
+          type="text"
+          name="code"
+          placeholder="City code"
+          pattern="[0-9]{5}"
+          [(ngModel)]="city.code"
+          required
+          maxlength="5"
+          i18n-placeholder="@@input.placeholder.cityCode">
+          <mat-hint align="end">{{ code.value.length }} / 5</mat-hint>
+        </mat-form-field>
+      </div>
+      <mat-form-field color="warn">
+        <input
+        matInput
+        type="text"
+        name="name"
+        placeholder="City name - uppercase"
+        pattern="[0-9-A-Z\ ]+"
+        [(ngModel)]="city.name"
+        (change)="city.name = city.name.toUpperCase()"
+        required
+        i18n-placeholder="@@input.placeholder.cityNameUppercase">
+      </mat-form-field>
+      <mat-form-field color="warn">
+        <input
+        matInput
+        type="number"
+        name="inhabitants"
+        placeholder="Inhabitants"
+        [(ngModel)]="city.inhabitants"
+        i18n-placeholder="@@input.placeholder.inhabitants">
+      </mat-form-field>
+      <mat-form-field color="warn">
+        <input
+        matInput
+        type="text"
+        name="mayorName"
+        placeholder="Mayor name"
+        [(ngModel)]="city.mayorName"
+        i18n-placeholder="@@input.placeholder.mayor">
+      </mat-form-field>
+    </div>
+    <div class="address-datas">
+      <mat-form-field color="warn">
+        <input
+        #postalCode
+        matInput
+        type="text"
+        name="postalCode"
+        placeholder="Postal code"
+        pattern="[0-9]{5}"
+        maxlength="5"
+        [(ngModel)]="city.postalCode"
+        i18n-placeholder="@@input.placeholder.postalCode">
+        <mat-hint align="end">{{ postalCode.value.length }} / 5</mat-hint>
+      </mat-form-field>
+      <mat-form-field color="warn">
+        <mat-select [(ngModel)]="city.income" name="income" placeholder="income" i18n-placeholder="@@input.placeholder.city.income">
+          <mat-option *ngFor="let incomeoption of incomeoptions" [value]="incomeoption.value">
+            {{ incomeoption.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="actions">
+    <button
+      mat-raised-button
+      type="submit"
+      color="warn"
+      [disabled]="cityForm.form.invalid"
+      i18n="@@input.save">Save</button>
+  </div>
+</form>
+</section>

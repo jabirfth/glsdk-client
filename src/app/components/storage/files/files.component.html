@@ -1,0 +1,33 @@
+<section *ngIf="container">
+
+  <h3 i18n="@@global.filesAvailableIn">Files available in {{container.name}}</h3>
+
+  <div class="table">
+    <table>
+      <thead>
+        <th i18n="@@global.name">Name</th>
+        <th i18n="@@global.size">Size</th>
+        <th i18n="@@global.lastChange">Last change</th>
+        <th i18n="@@global.actions">Actions</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let file of files | async">
+        <td>{{file.name}}</td>
+        <td>{{file.size | bytes}}</td>
+        <td>{{file.ctime | date:medium}}</td>
+        <td>
+          <button mat-icon-button color="warn" (click)="downloadFile(file)">
+            <mat-icon>system_update_alt</mat-icon>
+          </button>
+          <button mat-icon-button (click)="removeFile(file)">
+            <mat-icon>delete_forever</mat-icon>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
+<app-file-form [container]="container"></app-file-form>

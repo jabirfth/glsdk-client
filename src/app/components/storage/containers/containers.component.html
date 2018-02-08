@@ -1,0 +1,22 @@
+<section>
+
+  <h3 i18n="@@global.chooseAddContainer">Choose a container or add a new one</h3>
+
+  <div class="table">
+    <table>
+      <thead>
+        <th i18n="@@global.containerName">Container name</th>
+        <th i18n="@@global.sze">Size</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let container of containers | async" (click)="selectContainer(container)">
+          <td>{{container.name}}</td>
+          <td>{{container.size | bytes}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <app-container-form></app-container-form>
+
+</section>

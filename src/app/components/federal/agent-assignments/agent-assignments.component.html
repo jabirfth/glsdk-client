@@ -1,0 +1,44 @@
+<app-agent-assignment-form [agent]="agent"></app-agent-assignment-form>
+
+<mat-table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="rank">
+    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.rank">Rank</mat-header-cell>
+    <mat-cell *matCellDef="let assignment">{{assignment.rank.label}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="department">
+    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.department">Department</mat-header-cell>
+    <mat-cell *matCellDef="let assignment">{{assignment.department.label}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="beginDate">
+    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.from">From</mat-header-cell>
+    <mat-cell *matCellDef="let assignment">{{assignment.beginDate | date}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="endDate">
+    <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.to">To</mat-header-cell>
+    <mat-cell *matCellDef="let assignment">{{assignment.endDate | date}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef i18n="@@global.actions">Actions</mat-header-cell>
+    <mat-cell *matCellDef="let assignment">
+      <button mat-icon-button (click)="deleteAssignment(assignment)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+
+<mat-paginator
+  #paginator
+  [length]="totalElement"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions">
+</mat-paginator>

@@ -1,0 +1,42 @@
+<mat-card class="Login mat-elevation-z20">
+  <mat-card-title class="Login-title" i18n="@@login.provider">Which provider do you want to use?</mat-card-title>
+  <mat-card-content class="Login-content l-flexContainer">
+    <div class="error">{{errorMessage}}</div>
+    <form class="form-container" (submit)="login()">
+      <mat-form-field color="warn">
+        <input
+          matInput
+          type="text"
+          name="username"
+          placeholder="Insert your username"
+          [(ngModel)]="username"
+          required
+          i18n-placeholder="@@input.placeholder.username">
+      </mat-form-field>
+      <mat-form-field color="warn">
+        <input
+          matInput
+          type="password"
+          name="password"
+          placeholder="Insert your password"
+          [(ngModel)]="password"
+          required
+          i18n-placeholder="@@input.placeholder.password">
+      </mat-form-field>
+      <mat-radio-group [(ngModel)]="mode" name="mode" required>
+        <mat-radio-button value="ldap">LDAP</mat-radio-button>
+        <mat-radio-button value="database"><span i18n="@@global.database">Database</span></mat-radio-button>
+      </mat-radio-group>
+      <button
+        mat-raised-button
+        type="submit"
+        color="warn"
+        [disabled]="submitDisabled"
+        i18n="@@input.submit">Submit</button>
+    </form>
+    <div class="l-flexCentered Login-or" i18n="@@global.or">or</div>
+    <div class="l-flexCentered Login-franceconnect">
+      <a mat-raised-button color="warn" (click)="loginWithFranceConnect()" i18n="@@login.provider.franceconnect">Login via France Connect</a>
+    </div>
+  </mat-card-content>
+</mat-card>

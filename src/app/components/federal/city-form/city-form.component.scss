@@ -1,0 +1,51 @@
+.form-container {
+  align-items: center;
+  background-color: rgba(220, 220, 220, 0.4);
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  color: #696969;
+  padding: 50px;
+  width: 90%;
+}
+
+.datas {
+  display: flex;
+  flex-direction: row;
+}
+
+.city-datas,
+.address-datas {
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin: 0 20px;
+  width: 100%
+}
+
+.actions {
+  justify-content: center;
+  display: flex;
+}
+
+mat-form-field, .fieldOnCreate {
+  width: 100%;
+}
+
+button {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 640px) {
+  .form-container {
+    padding: 10px 20px 0;
+    margin: 20px 0;
+  }
+
+  .datas {
+    flex-direction: column;
+  }
+
+  button {
+    margin-top: 50px;
+  }
+}

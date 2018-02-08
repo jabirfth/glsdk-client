@@ -1,0 +1,16 @@
+<form (submit)="createContainer()">
+  <mat-form-field color="warn">
+    <input
+      matInput
+      type="text"
+      name="password"
+      placeholder="New container name"
+      [(ngModel)]="container.name"
+      required
+      i18n-placeholder="@@input.placeholder.newContainerName">
+  </mat-form-field>
+  <button
+    mat-raised-button
+    type="submit"
+    color="warn" i18n="@@input.addStorage">Add storage</button>
+</form>

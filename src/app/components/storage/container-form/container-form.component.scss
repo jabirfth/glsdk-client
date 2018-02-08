@@ -1,0 +1,16 @@
+form {
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+}
+
+mat-form-field {
+  text-align: center;
+  width: 50%;
+}
+
+button {
+  left: -1px;
+  position: relative;
+  top: -3px;
+}

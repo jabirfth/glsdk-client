@@ -1,0 +1,59 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.orders">Orders</ng-container> ({{ totalElement }})</h2>
+  <div class="gl-list-header-action">
+    <button mat-button routerLink="/orders/new">
+      <mat-icon>add</mat-icon>
+      <ng-container i18n="@@global.add">Add</ng-container>
+    </button>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="gl-filters">
+    <mat-form-field color="warm">
+      <input matInput type="text" placeholder="name" i18n-placeholder="@@input.placeholder.name"
+             [(ngModel)]="filters.name"
+             (keyup)="filter()">
+    </mat-form-field>
+  </div>
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.name">Name</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.amount">Amount</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{item.amount}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="totalamount">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.totalamount">Total Amount</mat-header-cell>
+      <mat-cell *matCellDef="let item">{{getContributionsAmountTotal(item)}}</mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="center" *matHeaderCellDef i18n="@@global.actions">Actions</mat-header-cell>
+      <mat-cell *matCellDef="let item" class="center view">
+        <a mat-raised-button color="warn" [routerLink]="['/orders', item.id]" i18n="@@global.view">View</a>
+        <a mat-raised-button color="warn" [routerLink]="['/orders', item.id, 'edit']" i18n="@@global.edit">Edit</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElement"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+
+</section>

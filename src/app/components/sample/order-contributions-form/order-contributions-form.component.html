@@ -1,0 +1,36 @@
+<form class="form-container" [formGroup]="form" (submit)="createOrUpdateOrderContribution()" >
+  <div>
+    <mat-form-field color="warn">
+      <input
+        matInput
+        name="agent"
+        type="text"
+        placeholder="Agent"
+        formControlName="agent"
+        required
+        i18n-placeholder="@@input.placeholder.agent"
+      >
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field color="warn">
+      <input
+        matInput
+        name="amount"
+        type="text"
+        placeholder=""
+        formControlName="amount"
+        required
+        i18n-placeholder="@@input.placeholder.amount"
+      >
+    </mat-form-field>
+  </div>
+
+  <button
+    mat-raised-button
+    type="submit"
+    color="warn"
+    [disabled]="form.invalid"
+    i18n="@@input.save"
+  >Save</button>
+</form>

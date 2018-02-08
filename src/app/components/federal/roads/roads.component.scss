@@ -1,0 +1,37 @@
+section {
+  padding: 20px;
+}
+
+mat-form-field,
+mat-form-field input {
+  text-align: center;
+  width: 100%;
+}
+
+.mat-column-id,
+.mat-column-type {
+  max-width: 120px;
+}
+
+.mat-column-actions {
+  max-width: 250px;
+}
+
+.center {
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  section {
+    padding: 10px 0;
+  }
+
+  mat-cell {
+    font-size: 10px;
+  }
+
+  a {
+    font-size: 10px;
+    padding-left: 0;
+  }
+}

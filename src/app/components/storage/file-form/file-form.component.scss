@@ -1,0 +1,57 @@
+section {
+  background-color: rgba(220, 220, 220, 0.4);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  margin: 20px auto;
+}
+
+@media screen and (max-width: 640px) {
+  section {
+    min-width: inherit;
+    padding: 10px 0;
+    width: 100%;
+  }
+}
+
+table {
+  text-align: center;
+}
+
+th,
+td {
+  padding: 4px 8px;
+  text-align: center;
+}
+
+td {
+  background: white;
+}
+
+.status,
+.actions {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.status {
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.icon-button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  margin: 4px 8px;
+}

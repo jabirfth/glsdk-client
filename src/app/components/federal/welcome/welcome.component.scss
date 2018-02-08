@@ -1,0 +1,16 @@
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+  height: calc(100vh - 200px);
+  padding: 20px 40px 50px;
+}
+
+section p {
+  font-size: 2em;
+  text-align: center;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -1,0 +1,21 @@
+//
+// Boîte à outils Flexbox
+//
+
+%l-flexBase {
+  display: flex;
+  box-sizing: border-box;
+}
+
+%l-flexContainer {
+  @extend %l-flexBase;
+
+  max-width: 100%;
+  overflow: hidden;
+}
+
+%l-flex {
+  flex: 1;
+  box-sizing: border-box;
+}
+

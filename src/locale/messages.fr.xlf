@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="input.placeholder.rank" datatype="html">
+        <source>Rank</source>
+        <target>Grade</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignment-form/agent-assignment-form.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.department" datatype="html">
+        <source>Department</source>
+        <target>Service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignment-form/agent-assignment-form.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.begindate" datatype="html">
+        <source>Choose a begin date</source>
+        <target>Date de début</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignment-form/agent-assignment-form.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.enddate" datatype="html">
+        <source>Choose an end date</source>
+        <target>Date de fin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignment-form/agent-assignment-form.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.save" datatype="html">
+        <source>Save</source>
+        <target>Enregistrer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignment-form/agent-assignment-form.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.rank" datatype="html">
+        <source>Rank</source>
+        <target>Grade</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignments/agent-assignments.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.department" datatype="html">
+        <source>Department</source>
+        <target>Service</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignments/agent-assignments.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.from" datatype="html">
+        <source>From</source>
+        <target>De</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignments/agent-assignments.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.to" datatype="html">
+        <source>To</source>
+        <target>À</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignments/agent-assignments.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.actions" datatype="html">
+        <source>Actions</source>
+        <target>Actions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent-assignments/agent-assignments.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/files/files.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.at" datatype="html">
+        <source>at</source>
+        <target>à</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agent/agent.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.code" datatype="html">
+        <source>Code</source>
+        <target>Code</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.firsname" datatype="html">
+        <source>First name</source>
+        <target>Prénom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.lastname" datatype="html">
+        <source>Last name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.email" datatype="html">
+        <source>E-mail</source>
+        <target>Courriel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.view" datatype="html">
+        <source>View</source>
+        <target>Voir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.delete" datatype="html">
+        <source>Delete</source>
+        <target>Supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/agents/agents.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.menu" datatype="html">
+        <source>Menu</source>
+        <target>Menu</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.login" datatype="html">
+        <source>Login</source>
+        <target>Se connecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.logout" datatype="html">
+        <source>Logout</source>
+        <target>Se déconnecter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.cities" datatype="html">
+        <source>Cities</source>
+        <target>Villes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.displayCities" datatype="html">
+        <source>Display cities</source>
+        <target>Afficher les villes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.addCity" datatype="html">
+        <source>Add new city</source>
+        <target>Ajouter une ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.displayRoads" datatype="html">
+        <source>Display roads</source>
+        <target>Afficher les rues</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.addRoad" datatype="html">
+        <source>Add new road</source>
+        <target>Ajouter une rue</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.agents" datatype="html">
+        <source>Agents</source>
+        <target>Agents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.agentsAssignations" datatype="html">
+        <source>Agents assignations</source>
+        <target>Assignations d'agents</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.displayDepartments" datatype="html">
+        <source>Display departments</source>
+        <target>Afficher les services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.orders" datatype="html">
+        <source>Orders</source>
+        <target>Commandes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.createOrder" datatype="html">
+        <source>Create new order</source>
+        <target>Créer une commande</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.filesExplorer" datatype="html">
+        <source>Files explorer</source>
+        <target>Explorateur de fichiers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.findFile" datatype="html">
+        <source>Find a file</source>
+        <target>Trouver un fichier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/files/files.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.inhabitants" datatype="html">
+        <source>Inhabitants</source>
+        <target>Habitants</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.mayor" datatype="html">
+        <source>Mayor</source>
+        <target>Maire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/cities/cities.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="78dfbfef736e0c01e0cea37c4cc116271aaa9d3d" datatype="html">
+        <source>Return to cities</source>
+        <target>Retour aux villes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.or" datatype="html">
+        <source>or</source>
+        <target>ou</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/login/login.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a3bfc58358f4948980eeee5fdf96f7ad4d5a7e93" datatype="html">
+        <source>Edit this city</source>
+        <target>Modifier la ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.nameLowercase" datatype="html">
+        <source>Name (lowercase):</source>
+        <target>Nom (minuscule):</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.mayorName" datatype="html">
+        <source>Mayor:</source>
+        <target>Maire :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.phoneNumber" datatype="html">
+        <source>Phone number:</source>
+        <target>Numéro de téléphone :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.faxNumber" datatype="html">
+        <source>Fax number:</source>
+        <target>Numéro de fax :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.address1" datatype="html">
+        <source>Address:</source>
+        <target>Adresse :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.address2" datatype="html">
+        <source>Address complement:</source>
+        <target>Complément d'adresse :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.postalCode" datatype="html">
+        <source>Postal code:</source>
+        <target>Code postal :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.cityRoads" datatype="html">
+        <source>City Roads</source>
+        <target>Rues de la ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city/city.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.cityCode" datatype="html">
+        <source>City code</source>
+        <target>Code de la ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/road-form/road-form.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.cityNameUppercase" datatype="html">
+        <source>City name - uppercase</source>
+        <target>Nom de la ville - en capitale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.inhabitants" datatype="html">
+        <source>Inhabitants</source>
+        <target>Habitants</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.mayor" datatype="html">
+        <source>Mayor name</source>
+        <target>Maire</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.address1" datatype="html">
+        <source>Address - line 1</source>
+        <target>Adresse - ligne 1</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.address2" datatype="html">
+        <source>Address - line 2</source>
+        <target>Adresse - ligne 2</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.postalCode" datatype="html">
+        <source>Postal code</source>
+        <target>Code postal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.city" datatype="html">
+        <source>City</source>
+        <target>Ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.phoneNumber" datatype="html">
+        <source>Phone number</source>
+        <target>Numéro de téléphone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/city-form/city-form.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.chooseAddContainer" datatype="html">
+        <source>Choose a container or add a new one</source>
+        <target>Choisir un dossier ou en créer un nouveau</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/containers/containers.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.containerName" datatype="html">
+        <source>Container name</source>
+        <target>Nom du dossier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/containers/containers.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.sze" datatype="html">
+        <source>Size</source>
+        <target>Taille</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/containers/containers.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.newContainerName" datatype="html">
+        <source>New container name</source>
+        <target>Nom du dossier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/container-form/container-form.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.addStorage" datatype="html">
+        <source>Add storage</source>
+        <target>Ajouter un fichier</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/container-form/container-form.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.id" datatype="html">
+        <source>Id</source>
+        <target>Id</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.label" datatype="html">
+        <source>Label</source>
+        <target>Label</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.city" datatype="html">
+        <source>City</source>
+        <target>Ville</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/departments/departments.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.filesAvailableIn" datatype="html">
+        <source>Files available in <x id="INTERPOLATION" equiv-text="{{container.name}}"/></source>
+        <target>Fichiers disponible dans <x id="INTERPOLATION" equiv-text="{{container.name}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/files/files.component.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.size" datatype="html">
+        <source>Size</source>
+        <target>Taille</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/files/files.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.lastChange" datatype="html">
+        <source>Last change</source>
+        <target>Dernier changement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/files/files.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.addFile" datatype="html">
+        <source>Add new files</source>
+        <target>Ajouter des fichiers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.uploadQueue" datatype="html">
+        <source>Upload queue: <x id="INTERPOLATION" equiv-text="{{ uploader?.queue?.length }}"/> file(s)</source>
+        <target>Upload: <x id="INTERPOLATION" equiv-text="{{ uploader?.queue?.length }}"/> fichier(s)</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.progress" datatype="html">
+        <source>Progress</source>
+        <target>Progression</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.status" datatype="html">
+        <source>Status</source>
+        <target>Status</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.upload" datatype="html">
+        <source>Upload</source>
+        <target>Upload</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.cancel" datatype="html">
+        <source>Cancel</source>
+        <target>Annuler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.remove" datatype="html">
+        <source>Remove</source>
+        <target>Supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.uploadAll" datatype="html">
+        <source>Upload all</source>
+        <target>Tout uploader</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.cancelAll" datatype="html">
+        <source>Cancel all</source>
+        <target>Tout annuler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.removeAll" datatype="html">
+        <source>Remove all</source>
+        <target>Tout supprimer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/storage/file-form/file-form.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.username" datatype="html">
+        <source>Insert your username</source>
+        <target>Votre nom d'utilisateur</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/ldap-login/ldap-login.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.password" datatype="html">
+        <source>Insert your password</source>
+        <target>Votre password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/ldap-login/ldap-login.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.submit" datatype="html">
+        <source>Submit</source>
+        <target>Envoyer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/ldap-login/ldap-login.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.provider" datatype="html">
+        <source>Login</source>
+        <target>Connectez-vous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/login/login.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.provider.franceconnect" datatype="html">
+        <source>Login via France Connect</source>
+        <target>France Connect</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/login/login.component.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login.provider.ldap" datatype="html">
+        <source>Login with LDAP</source>
+        <target>Se connecter via LDAP</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/authentication/login/login.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.type" datatype="html">
+        <source>Type</source>
+        <target>Type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.edit" datatype="html">
+        <source>Edit</source>
+        <target>Editer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/roads/roads.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.roadId" datatype="html">
+        <source>Road id</source>
+        <target>Id de la route</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/road-form/road-form.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.roadLabelUppercase" datatype="html">
+        <source>Road label - uppercase</source>
+        <target>Label de la route - en capitale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/road-form/road-form.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="input.placeholder.roadTypeUppercase" datatype="html">
+        <source>Road type - uppercase</source>
+        <target>Type de la route - en capitale</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/road-form/road-form.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.save" datatype="html">
+        <source>Save</source>
+        <target>Save</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/road-form/road-form.component.ts</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="global.welcome" datatype="html">
+        <source>Welcome to the Grand Lyon</source>
+        <target>Bienvenue au Grand Lyon</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/federal/welcome/welcome.component.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.switchLanguage" datatype="html">
+        <source>Change language</source>
+        <target>Changer de langue</target>
+      </trans-unit>
+      <trans-unit id="nav.otherLanguage" datatype="html">
+        <source>Français</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="global.database" datatype="html">
+        <source>Database</source>
+        <target>Base de données</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

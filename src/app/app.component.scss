@@ -1,0 +1,52 @@
+@import '~theming/layout';
+
+//
+// Application
+//
+
+.App {
+  @extend %l-flexContainer;
+
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: stretch;
+  min-height: 100%;
+
+  &-logo {
+    img {
+      display: block;
+    }
+  }
+}
+
+//
+// Sidenav
+//
+
+mat-sidenav-container {
+  @extend %l-flex;
+}
+
+.Sidebar {
+  width: 280px;
+
+  &-header {
+    @extend %l-flexBase;
+
+    align-items: center;
+    justify-content: start;
+    height: 132px;
+    padding-left: 16px;
+
+    border-bottom: 1px solid rgba(black, 0.12);
+  }
+}
+
+/* responsive */
+
+// @media screen and (max-width: 640px) {
+//   mat-toolbar img {
+//     height: 25px;
+//   }
+// }

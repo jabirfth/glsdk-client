@@ -1,0 +1,4 @@
+<section>
+<app-containers [containers]="containers" (onContainerChange)="selectedContainer = $event"></app-containers>
+<app-files [container]="selectedContainer"></app-files>
+</section>

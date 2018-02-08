@@ -1,0 +1,77 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.cities">Cities</ng-container> ({{ totalElements }})</h2>
+  <div class="gl-list-header-action">
+    <button *ngIf="adminGuard.canActivate() | async" mat-button routerLink="/cities/new">
+      <mat-icon>add</mat-icon>
+      <ng-container i18n="@@global.add">Add</ng-container>
+    </button>
+    <button mat-button (click)="export()">
+      <mat-icon>file_download</mat-icon>
+      <ng-container i18n="@@global.export">Export</ng-container>
+    </button>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+  <div class="gl-filters">
+    <mat-form-field color="warn">
+      <input matInput type="text" placeholder="code" i18n-placeholder="@@input.placeholder.cityCode"
+             [(ngModel)]="codeFilterExpression">
+    </mat-form-field>
+    <mat-form-field color="warn">
+      <input matInput type="text" placeholder="postalCode" i18n-placeholder="@@input.placeholder.postalCode"
+             [(ngModel)]="postalCodeFilterExpression">
+    </mat-form-field>
+    <mat-form-field color="warn">
+      <input matInput type="text" placeholder="name" i18n-placeholder="@@input.placeholder.name"
+             [(ngModel)]="nameFilterExpression">
+    </mat-form-field>
+  </div>
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="code">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.code">Code</mat-header-cell>
+      <mat-cell *matCellDef="let city">{{city.code}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="postalCode">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.postalCode">PostalCode</mat-header-cell>
+      <mat-cell *matCellDef="let city">{{city.postalCode}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.name">Name</mat-header-cell>
+      <mat-cell *matCellDef="let city">{{city.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="inhabitants">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.inhabitants">Inhabitants</mat-header-cell>
+      <mat-cell *matCellDef="let city">{{city.inhabitants | number}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="mayorName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.mayor">Mayor</mat-header-cell>
+      <mat-cell *matCellDef="let city">{{city.mayorName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="center" *matHeaderCellDef i18n="@@global.actions">Actions</mat-header-cell>
+      <mat-cell *matCellDef="let city" class="center view">
+        <a mat-raised-button color="warn" href="#" [routerLink]="[city.code]" i18n="@@global.view">View</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElements"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+
+</section>

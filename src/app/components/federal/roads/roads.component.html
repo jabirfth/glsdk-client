@@ -1,0 +1,46 @@
+<div class="gl-list-header">
+  <h2><ng-container i18n="@@title.roads">Roads</ng-container></h2>
+</div>
+
+<mat-divider></mat-divider>
+
+<section>
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.id">Id</mat-header-cell>
+      <mat-cell *matCellDef="let road">{{road.id}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="label">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.label">Label</mat-header-cell>
+      <mat-cell *matCellDef="let road">{{road.label}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.type">Type</mat-header-cell>
+      <mat-cell *matCellDef="let road">{{road.type}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell class="center" *matHeaderCellDef i18n="@@global.actions">Actions</mat-header-cell>
+      <mat-cell *matCellDef="let road" class="center view">
+        <a mat-raised-button color="warn" href="#" [routerLink]="['/roads', road.id, 'edit']" i18n="@@global.edit">Edit</a>
+        <a mat-button color="warn" href="#" (click)="deleteRoad(road)" i18n="@@global.delete">Delete</a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <mat-paginator
+    #paginator
+    [length]="totalElement"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="pageEvent = $event">
+  </mat-paginator>
+
+</section>
+<a href="#" (click)="export()">Export data</a>
