@@ -1,5 +1,6 @@
 /* tslint:disable */
 import {
+  User,
   Role
 } from '../index';
 
@@ -7,17 +8,19 @@ declare var Object: any;
 export interface RoleMappingInterface {
   "id"?: number;
   "principalType"?: string;
-  "principalId"?: string;
+  "principalId"?: number;
   "roleId"?: number;
-  role?: Role;
+  role?: User;
+  user?: Role;
 }
 
 export class RoleMapping implements RoleMappingInterface {
   "id": number;
   "principalType": string;
-  "principalId": string;
+  "principalId": number;
   "roleId": number;
-  role: Role;
+  role: User;
+  user: Role;
   constructor(data?: RoleMappingInterface) {
     Object.assign(this, data);
   }
@@ -60,7 +63,7 @@ export class RoleMapping implements RoleMappingInterface {
         },
         "principalId": {
           name: 'principalId',
-          type: 'string'
+          type: 'number'
         },
         "roleId": {
           name: 'roleId',
@@ -70,6 +73,11 @@ export class RoleMapping implements RoleMappingInterface {
       relations: {
         role: {
           name: 'role',
+          type: 'User',
+          model: 'User'
+        },
+        user: {
+          name: 'user',
           type: 'Role',
           model: 'Role'
         },

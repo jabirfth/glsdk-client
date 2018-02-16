@@ -4,7 +4,6 @@ import { UserApi } from '../shared/sdk/services/custom';
 import { Observable } from 'rxjs/Observable';
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
 import { Subject } from 'rxjs/Subject';
-import { RoleMappingApi } from '../shared/sdk/services/custom/RoleMapping';
 
 @Injectable()
 export class UserService {
@@ -13,24 +12,16 @@ export class UserService {
 
   constructor(
     private userApi: UserApi,
-    private roleMappingApi: RoleMappingApi,
   ) {
   }
 
   createOrUpdateUserWithRoles(user: User): Observable<User> {
     let savedUser;
     return this.userApi.upsert(user)
-      .switchMap((result) => {
+      .switchMap((result: User) => {
         savedUser = result;
-        return this.userApi.deleteRoles(savedUser.id);
+        return this.userApi.replaceRoles(savedUser.id, user.roles.map(role => role.id));
       })
-      .switchMap(() => this.roleMappingApi.createMany(
-        user.roles.map(role => ({
-          principalType: 'USER',
-          principalId: savedUser.id,
-          roleId: role.id,
-        })),
-      ))
       .map(() => Object.assign({}, user, { id: savedUser.id }));
   }
 
@@ -44,7 +35,7 @@ export class UserService {
   }
 
   removeUser(user: User): Observable<void> {
-    return this.userApi.deleteById(user.id);
+    return this.userApi.deleteById<void>(user.id);
   }
 
   get usersChange() {

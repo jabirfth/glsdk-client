@@ -58,8 +58,8 @@ import { AppMaterialModule } from './app.material.module';
 import { MatPaginatorIntl } from '@angular/material';
 import { OrderFormComponent } from './components/sample/order-form/order-form.component';
 import { UserService } from './services/user.service';
-import { UsersComponent } from './components/federal/users/users.component';
-import { UserFormComponent } from './components/federal/user-form/user-form.component';
+import { UsersComponent } from './components/authentication/users/users.component';
+import { UserFormComponent } from './components/authentication/user-form/user-form.component';
 import { RoleService } from './services/role.service';
 
 

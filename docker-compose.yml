@@ -22,7 +22,7 @@ services:
       - "8080:80"
 
   server:
-    image: software-factory.clevertoday.xyz/grandlyon-demo-api
+    image: grandlyon/glsdk-server
     restart: unless-stopped
     volumes:
       - server-storage:/storage

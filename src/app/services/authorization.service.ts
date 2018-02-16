@@ -88,6 +88,10 @@ export class AuthorizationService {
     return this.loopBackAuth.getAccessTokenId() !== null;
   }
 
+  getCurrentUserId(): string {
+    return this.loopBackAuth.getCurrentUserId();
+  }
+
   private initLoopbackAuthToken(accessToken: string, userId: Number): void {
     this.loopBackAuth.setToken({
       userId,

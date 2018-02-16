@@ -17,8 +17,8 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { OrdersComponent } from './components/sample/orders/orders.component';
 import { OrderComponent } from './components/sample/order-detail/order-detail.component';
 import { OrderFormComponent } from './components/sample/order-form/order-form.component';
-import { UsersComponent } from './components/federal/users/users.component';
-import { UserFormComponent } from './components/federal/user-form/user-form.component';
+import { UsersComponent } from './components/authentication/users/users.component';
+import { UserFormComponent } from './components/authentication/user-form/user-form.component';
 
 const appRoutes: Routes = [
   {
