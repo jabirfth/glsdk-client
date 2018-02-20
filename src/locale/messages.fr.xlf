@@ -212,7 +212,7 @@
       </trans-unit>
       <trans-unit id="nav.displayCities" datatype="html">
         <source>Display cities</source>
-        <target>Afficher les villes</target>
+        <target>Villes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -227,8 +227,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="nav.displayRoads" datatype="html">
-        <source>Display roads</source>
-        <target>Afficher les rues</target>
+        <source>Roads</source>
+        <target>Rues</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -251,16 +251,16 @@
         </context-group>
       </trans-unit>
       <trans-unit id="nav.agentsAssignations" datatype="html">
-        <source>Agents assignations</source>
-        <target>Assignations d'agents</target>
+        <source>Agents - Assignations</source>
+        <target>Agents - Assignations</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="nav.displayDepartments" datatype="html">
-        <source>Display departments</source>
-        <target>Afficher les services</target>
+        <source>Departments</source>
+        <target>Services</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">68</context>
@@ -275,8 +275,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="nav.createOrder" datatype="html">
-        <source>Create new order</source>
-        <target>Créer une commande</target>
+        <source>Manage orders</source>
+        <target>Gérer les commandes</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -818,6 +818,106 @@
         <source>Database</source>
         <target>Base de données</target>
       </trans-unit>
+      <trans-unit id="order.detail.back" datatype="html">
+        <source>Return to Orders</source>
+        <target>Retour aux commandes</target>
+      </trans-unit>
+      <trans-unit id="order.detail.amount" datatype="html">
+        <source>montant</source>
+        <target>Montant</target>
+      </trans-unit>
+      <trans-unit id="order.detail.title" datatype="html">
+        <source>Order</source>
+        <target>Commande</target>
+      </trans-unit>
+      <trans-unit id="order.detail.action.addContribution" datatype="html">
+        <source>Ajouter une contribution</source>
+        <target>Ajouter une contribution</target>
+      </trans-unit>
+      <trans-unit id="title.agents" datatype="html">
+        <source>Agents</source>
+        <target>Agents</target>
+      </trans-unit>      
+      <trans-unit id="title.cities" datatype="html">
+        <source>Cities</source>
+        <target>Villes</target>
+      </trans-unit>
+      <trans-unit id="title.services" datatype="html">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>             
+      <trans-unit id="title.roads" datatype="html">
+        <source>Roads</source>
+        <target>Rues</target>
+      </trans-unit>             
+      <trans-unit id="title.orders" datatype="html">
+        <source>Orders</source>
+        <target>Commandes</target>
+      </trans-unit>             
+      <trans-unit id="title.users" datatype="html">
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </trans-unit> 
+      <trans-unit id="nav.users" datatype="html">
+        <source>Users</source>
+        <target>Utilisateurs</target>
+      </trans-unit>
+      <trans-unit id="global.add" datatype="html">
+        <source>Add</source>
+        <target>Ajouter</target>
+      </trans-unit>        
+      <trans-unit id="global.export" datatype="html">
+        <source>Export</source>
+        <target>Exporter</target>
+      </trans-unit>        
+      <trans-unit id="global.back" datatype="html">
+        <source>Back</source>
+        <target>Retour</target>
+      </trans-unit>        
+      <trans-unit id="global.amount" datatype="html">
+        <source>Amount</source>
+        <target>Montant</target>
+      </trans-unit>        
+      <trans-unit id="global.totalamount" datatype="html">
+        <source>Amount Total</source>
+        <target>Montant total</target>
+      </trans-unit>        
+      <trans-unit id="global.agent" datatype="html">
+        <source>Agent</source>
+        <target>Agent</target>
+      </trans-unit> 
+      <trans-unit id="global.username" datatype="html">
+        <source>Username</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit> 
+      <trans-unit id="global.roles" datatype="html">
+        <source>Roles</source>
+        <target>Roles</target>
+      </trans-unit> 
+      <trans-unit id="global.accountant" datatype="html">
+        <source>Accountant</source>
+        <target>Accountant</target>
+      </trans-unit>
+      <trans-unit id="input.placeholder.name" datatype="html">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>        
+      <trans-unit id="input.placeholder.agent" datatype="html">
+        <source>Agent</source>
+        <target>Agent</target>
+      </trans-unit>        
+      <trans-unit id="input.placeholder.amount" datatype="html">
+        <source>amount</source>
+        <target>montant</target>
+      </trans-unit>
+      <trans-unit id="input.placeholder.city.income" datatype="html">
+        <source>income</source>
+        <target>income</target>
+      </trans-unit>     
+      <trans-unit id="input.placeholder.email" datatype="html">
+        <source>email</source>
+        <target>email</target>
+      </trans-unit>          
     </body>
   </file>
 </xliff>
