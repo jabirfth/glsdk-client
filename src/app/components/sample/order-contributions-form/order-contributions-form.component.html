@@ -2,14 +2,21 @@
   <div>
     <mat-form-field color="warn">
       <input
-        matInput
-        name="agent"
         type="text"
         placeholder="Agent"
+        matInput
         formControlName="agent"
+        [matAutocomplete]="autoAgent"
+        (keyup)="searchAgents($event)"
+        (blur)="validateAgentControl()"
         required
         i18n-placeholder="@@input.placeholder.agent"
       >
+      <mat-autocomplete #autoAgent="matAutocomplete" [displayWith]="displayAgentValue">
+        <mat-option *ngFor="let agent of agents | async" [value]="agent">
+          {{ agent.id }} {{ agent.firstName }} {{ agent.lastName }}
+        </mat-option>
+      </mat-autocomplete>
     </mat-form-field>
   </div>
   <div>
@@ -18,7 +25,7 @@
         matInput
         name="amount"
         type="text"
-        placeholder=""
+        placeholder="Amount"
         formControlName="amount"
         required
         i18n-placeholder="@@input.placeholder.amount"

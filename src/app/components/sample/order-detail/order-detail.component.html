@@ -2,16 +2,16 @@
 
   <button mat-button routerLink="/orders" style="margin:1em">
     <mat-icon>keyboard_arrow_left</mat-icon>
-    <span i18n>Return to Orders</span>
+    <span i18n="@@order.detail.back">Return to Orders</span>
   </button>
 
 
   <mat-card>
     <mat-card-title>
-      Order : {{ order.name }}
+      <span i18n="@@order.detail.title">Order</span> : {{ order.name }}
     </mat-card-title>
     <mat-card-content>
-      <p><span i18n="@@input.placeholder.amount">montant</span> : {{ order.amount }}</p>
+      <p><span i18n="@@order.detail.amount">montant</span> : {{ order.amount }}</p>
     </mat-card-content>
   </mat-card>
 
@@ -28,7 +28,7 @@
 
   <mat-card>
     <mat-card-title>
-      Ajouter une contribution
+      <span i18n="@@order.detail.action.addContribution">Ajouter une contribution</span>
     </mat-card-title>
     <mat-card-content>
       <app-order-contributions-form [order]="order"></app-order-contributions-form>

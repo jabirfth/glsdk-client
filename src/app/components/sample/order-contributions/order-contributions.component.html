@@ -1,7 +1,7 @@
 <mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="agent">
     <mat-header-cell *matHeaderCellDef mat-sort-header i18n="@@global.agent">Agent</mat-header-cell>
-    <mat-cell *matCellDef="let ordercontribution">{{ordercontribution.agentId}} - {{ordercontribution.agent.email}}</mat-cell>
+    <mat-cell *matCellDef="let ordercontribution">{{ordercontribution.agentId}} - {{ ordercontribution.agent.firstName }} {{ ordercontribution.agent.lastName }}</mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="amount">

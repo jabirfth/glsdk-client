@@ -33,6 +33,20 @@ export class AgentService {
     return this.agentApi.findById(agentId);
   }
 
+  searchAgents(expression: string, limit?: number): Observable<Agent[]> {
+    return this.agentApi.find({
+      limit,
+      where: {
+        or: [
+          { firstName : { like: `%${expression}%` } },
+          { lastName : { like: `%${expression}%` } },
+          { id : { like: `%${expression}%` } },
+          { email : { like: `%${expression}%` } },
+        ],
+      },
+    });
+  }
+
   getAgentAssignments(agent: Agent, filter?: LoopBackFilter): Observable<AgentAssignment[]> {
     return this.agentApi.getAssignments(
       agent.id,
