@@ -1,5 +1,11 @@
 <div class="gl-list-header">
   <h2><ng-container i18n="@@title.services">Services</ng-container></h2>
+  <div class="gl-list-header-action">
+    <button mat-button (click)="export()">
+      <mat-icon>file_download</mat-icon>
+      <ng-container i18n="@@global.export">Export</ng-container>
+    </button>
+  </div>
 </div>
 
 <mat-divider></mat-divider>
@@ -73,4 +79,4 @@
   </mat-paginator>
 
 </section>
-<a href="#" (click)="export()">Export data</a>
+
