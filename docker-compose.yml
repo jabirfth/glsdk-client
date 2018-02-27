@@ -35,10 +35,10 @@ services:
       - FEDERAL_DB_NAME=grandlyon
       - FEDERAL_DB_USER=db_user
       - FEDERAL_DB_PASSWORD=P@ssw0rd
-      - AUTH_DB_HOST=db
-      - AUTH_DB_NAME=grandlyon
-      - AUTH_DB_USER=db_user
-      - AUTH_DB_PASSWORD=P@ssw0rd
+      - APP_DB_HOST=db
+      - APP_DB_NAME=grandlyon
+      - APP_DB_USER=db_user
+      - APP_DB_PASSWORD=P@ssw0rd
       - FILE_STORAGE_PATH=/storage
 
 volumes:
