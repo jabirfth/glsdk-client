@@ -918,6 +918,10 @@
         <source>email</source>
         <target>email</target>
       </trans-unit>          
+      <trans-unit id="global.confirmDelete" datatype="html">
+        <source>Are you sure to delete ?</source>
+        <target>Etes vous sûr de vouloir supprimer ?</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
