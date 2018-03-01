@@ -1,7 +1,7 @@
 <div class="gl-list-header">
   <h2><ng-container i18n="@@title.cities">Cities</ng-container> ({{ totalElements }})</h2>
   <div class="gl-list-header-action">
-    <button *ngIf="adminGuard.canActivate() | async" mat-button routerLink="/cities/new">
+    <button *appShowToRoles="['admin']" mat-button routerLink="/cities/new">
       <mat-icon>add</mat-icon>
       <ng-container i18n="@@global.add">Add</ng-container>
     </button>

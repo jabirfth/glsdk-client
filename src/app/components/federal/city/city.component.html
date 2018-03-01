@@ -6,7 +6,7 @@
     <button mat-icon-button color="warn" routerLink="/cities">
       <mat-icon>keyboard_arrow_left</mat-icon> <span i18n>Return to cities</span>
     </button>
-    <ng-container *ngIf="canEdit | async">
+    <ng-container *appShowToRoles="['admin']">
       &nbsp;<div i18n="@@global.or">or</div>&nbsp;
       <button mat-icon-button color="warn" [routerLink]="['/cities', city.code, 'edit']">
         <span i18n i18n="@@global.editCity">Edit this city</span> <mat-icon>keyboard_arrow_down</mat-icon>

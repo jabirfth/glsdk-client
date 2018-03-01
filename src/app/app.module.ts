@@ -63,6 +63,7 @@ import { UsersComponent } from './components/authentication/users/users.componen
 import { UserFormComponent } from './components/authentication/user-form/user-form.component';
 import { RoleService } from './services/role.service';
 import { environment } from '../environments/environment';
+import { ShowToRolesDirective } from './directive/show-to-role.directive';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { environment } from '../environments/environment';
     UsersComponent,
     UserFormComponent,
     RoadFormComponent,
+    ShowToRolesDirective,
     StorageComponent,
     WelcomeComponent,
   ],

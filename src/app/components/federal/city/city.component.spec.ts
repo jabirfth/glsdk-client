@@ -5,13 +5,20 @@ import { CityComponent } from './city.component';
 import { CityService } from '../../../services/city.service';
 import { City } from 'app/shared/sdk';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { DebugElement } from '@angular/core';
+import { DebugElement, Directive, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { By } from '@angular/platform-browser';
 import { MatIconModule, MatListModule } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockComponent } from 'ng2-mock-component';
-import { AdminGuard } from '../../../guards/admin.guard';
+
+@Directive({
+  selector: '[appShowToRoles]',
+})
+export class ShowToRolesDirectiveStub {
+  @Input()
+  set appShowToRoles(rolesArray: string[]) { }
+}
 
 describe('CityComponent', () => {
 
@@ -27,7 +34,6 @@ describe('CityComponent', () => {
     let component: CityComponent;
     let activatedRouteMock: ActivatedRoute;
     let cityServiceMock: CityService;
-    let adminGuardMock: AdminGuard;
 
     beforeEach(() => {
       activatedRouteMock = {
@@ -38,10 +44,7 @@ describe('CityComponent', () => {
       cityServiceMock = jasmine.createSpyObj('cityService', {
         getCityByCode: Observable.of(city),
       });
-      adminGuardMock = jasmine.createSpyObj('adminGuard', {
-        canActivate: Observable.of(true),
-      });
-      component = new CityComponent(activatedRouteMock, cityServiceMock, adminGuardMock);
+      component = new CityComponent(activatedRouteMock, cityServiceMock);
     });
 
     it('should get city ID in path and get city details from service', () => {
@@ -78,6 +81,7 @@ describe('CityComponent', () => {
         declarations: [
           CityComponent,
           MockComponent({ selector: 'app-roads', inputs: ['city'] }),
+          ShowToRolesDirectiveStub,
         ],
         imports: [
           MatIconModule,
@@ -85,20 +89,15 @@ describe('CityComponent', () => {
           NoopAnimationsModule,
           RouterTestingModule,
         ],
+        schemas: [
+          NO_ERRORS_SCHEMA,
+        ],
         providers: [
           {
             provide: CityService,
             useValue: {
               getCityByCode(): Observable<City> {
                 return Observable.of(city);
-              },
-            },
-          },
-          {
-            provide: AdminGuard,
-            useValue: {
-              canActivate(): Observable<boolean> {
-                return Observable.of(true);
               },
             },
           },

@@ -35,9 +35,11 @@ export class RoadsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.adminGuard.canActivate()) {
-      this.displayedColumns.push('actions');
-    }
+    this.adminGuard.canActivate().subscribe((canActivate) => {
+      if (canActivate) {
+        this.displayedColumns.push('actions');
+      }
+    });
     this.loadRoads();
     this.roadService.roadsChange.subscribe(() => {
       this.loadRoads();
