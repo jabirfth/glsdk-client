@@ -1,0 +1,9 @@
+@import '../theming';
+
+@import "config/variables";
+
+$ca-theme: app-override-theme(
+  mat-light-theme($ca-theme-primary, $ca-theme-accent, $ca-theme-warn),
+  $foreground: $ca-light-theme-foreground,
+  $background: $ca-light-theme-background
+);

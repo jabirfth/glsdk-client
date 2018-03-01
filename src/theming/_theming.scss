@@ -1,0 +1,11 @@
+@import "~sass-recursive-map-merge/recursive-map-merge";
+
+@function app-override-theme($mat-theme, $foreground: null, $background: null) {
+  $theme: (
+    foreground: $foreground,
+    background: $background,
+  );
+
+  @return recursive-map-merge($mat-theme, $theme);
+}
+

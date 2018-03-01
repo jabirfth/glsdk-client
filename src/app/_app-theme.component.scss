@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+@mixin app-app-theme($theme) {
+  $primary:    map-get($theme, primary);
+  $foreground: map-get($theme, foreground);
+
+  .Sidebar {
+    &-header {
+      border-bottom: 1px solid mat-color($foreground, divider);
+    }
+  }
+
+  .u-routerContainer {
+    a {
+      color: mat-color($primary, default);
+    }
+  }
+}

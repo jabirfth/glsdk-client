@@ -1,4 +1,4 @@
-@import '~theming/layout';
+@import '~theming/shared/layout';
 
 //
 // Application
@@ -14,8 +14,11 @@
   min-height: 100%;
 
   &-logo {
+    flex-grow: 1;
+
     img {
       display: block;
+      min-width: 100%;
     }
   }
 }
@@ -38,8 +41,7 @@ mat-sidenav-container {
     justify-content: start;
     height: 132px;
     padding-left: 16px;
-
-    border-bottom: 1px solid rgba(black, 0.12);
+    padding-right: 16px;
   }
 }
 

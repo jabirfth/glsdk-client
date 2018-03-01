@@ -21,7 +21,8 @@ export class CsvExportService {
     const exportFilter = Object.assign({}, filter, { limit: null, offset: null, skip: null });
     this.cityService.getCities(exportFilter).subscribe((cities) => {
       new Angular2Csv(cities, 'cities', {
-        headers: ['Code', 'Name', 'Postal Code', 'Mayor', 'Inhabitants', 'Income'],
+        headers: ['Code', 'Name','NameMin', 'Postal Code', 'Mayor', 'Inhabitants', 'Income'],
+        fieldSeparator: ';',
       });
     });
   }
@@ -31,6 +32,7 @@ export class CsvExportService {
     this.roadService.getRoads(exportFilter).subscribe((roads) => {
       new Angular2Csv(roads, 'roads', {
         headers: ['ID', 'City Code', 'Label'],
+        fieldSeparator: ';',
       });
     });
   }
@@ -40,6 +42,7 @@ export class CsvExportService {
     this.departmentService.getDepartments(exportFilter).subscribe((departments) => {
       new Angular2Csv(departments, 'departments', {
         headers: ['ID', 'Label', 'Short Label'],
+        fieldSeparator: ';',
       });
     });
   }
@@ -49,6 +52,7 @@ export class CsvExportService {
     this.userService.getUsers(exportFilter).subscribe((users) => {
       new Angular2Csv(users, 'users', {
         headers: [],
+        fieldSeparator: ';',
       });
     });
   }

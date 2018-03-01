@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+
+@mixin app-menu-theme($theme) {
+  $primary:    map-get($theme, primary);
+  $accent:     map-get($theme, accent);
+  $warn:       map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .mat-list-item {
+    &.active {
+      background-color: mat-color($background, actived-navigation);
+      box-shadow: 0 -4px 4px -4px inset rgba(black, 0.2), 0 4px 4px -4px inset rgba(black, 0.2);
+
+      .mat-list-icon {
+        color: mat-color($primary, default);
+      }
+    }
+  }
+}

@@ -29,9 +29,9 @@
       </mat-list-item>
     </ng-container>
 
-    <mat-divider></mat-divider>
-
     <ng-container *ngIf="agentGuard.canActivate() | async">
+
+      <mat-divider></mat-divider>
 
       <h3 mat-subheader i18n="@@nav.agents">Agents</h3>
       <mat-list-item routerLink="/agents" routerLinkActive="active">
@@ -63,9 +63,9 @@
       </mat-list-item>
     </ng-container>
 
+    <mat-divider></mat-divider>
   </ng-container>
 
-  <mat-divider></mat-divider>
   <h3 mat-subheader i18n="@@nav.switchLanguage">Change language</h3>
   <mat-list-item (click)="changeLanguage()">
     <mat-icon mat-list-icon>language</mat-icon>

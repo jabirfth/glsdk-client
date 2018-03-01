@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order.service';
 import { OrderContribution } from '../../../shared/sdk/models/OrderContribution';
@@ -10,7 +10,7 @@ import { OrderContributionDatasource } from './order-contribution.datasource';
 @Component({
   selector: 'app-order-contributions',
   templateUrl: './order-contributions.component.html',
-  styleUrls: ['./order-contributions.component.css'],
+  styleUrls: ['./order-contributions.component.scss'],
 })
 export class OrderContributionsComponent implements OnInit {
 
@@ -24,6 +24,8 @@ export class OrderContributionsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+
+  @ViewChild('transConfirmDelete') transConfirmDelete: ElementRef;
 
   constructor(private route: ActivatedRoute,
               private orderService: OrderService) {
@@ -46,7 +48,8 @@ export class OrderContributionsComponent implements OnInit {
   }
 
   deleteContribution(contribution: OrderContribution): boolean {
-    if (confirm('Are you sure to delete ')) {
+    const transConfirmDeleteMessage = this.transConfirmDelete.nativeElement.textContent;
+    if (confirm(transConfirmDeleteMessage)) {
       this.orderService.deleteContribution(contribution).subscribe();
       return false;
     }

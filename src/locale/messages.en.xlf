@@ -275,8 +275,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="nav.createOrder" datatype="html">
-        <source>Create new order</source>
-        <target>Create new order</target>
+        <source>Manage orders</source>
+        <target>Manage orders</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -817,6 +817,110 @@
       <trans-unit id="global.database" datatype="html">
         <source>Database</source>
         <target>Database</target>
+      </trans-unit>
+      <trans-unit id="order.detail.back" datatype="html">
+        <source>Return to Orders</source>
+        <target>Return to Orders</target>
+      </trans-unit>
+      <trans-unit id="order.detail.amount" datatype="html">
+        <source>montant</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="order.detail.title" datatype="html">
+        <source>Order</source>
+        <target>Order</target>
+      </trans-unit>
+      <trans-unit id="order.detail.action.addContribution" datatype="html">
+        <source>Ajouter une contribution</source>
+        <target>Add contribution</target>
+      </trans-unit>
+      <trans-unit id="title.agents" datatype="html">
+        <source>Agents</source>
+        <target>Agents</target>
+      </trans-unit>      
+      <trans-unit id="title.cities" datatype="html">
+        <source>Cities</source>
+        <target>Cities</target>
+      </trans-unit>
+      <trans-unit id="title.services" datatype="html">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>             
+      <trans-unit id="title.roads" datatype="html">
+        <source>Roads</source>
+        <target>Roads</target>
+      </trans-unit>             
+      <trans-unit id="title.orders" datatype="html">
+        <source>Orders</source>
+        <target>Orders</target>
+      </trans-unit>             
+      <trans-unit id="title.users" datatype="html">
+        <source>Users</source>
+        <target>Users</target>
+      </trans-unit> 
+      <trans-unit id="nav.users" datatype="html">
+        <source>Users</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="global.add" datatype="html">
+        <source>Add</source>
+        <target>Add</target>
+      </trans-unit>        
+      <trans-unit id="global.export" datatype="html">
+        <source>Export</source>
+        <target>Export</target>
+      </trans-unit>        
+      <trans-unit id="global.back" datatype="html">
+        <source>Back</source>
+        <target>Back</target>
+      </trans-unit>        
+      <trans-unit id="global.amount" datatype="html">
+        <source>Amount</source>
+        <target>Amount</target>
+      </trans-unit>        
+      <trans-unit id="global.totalamount" datatype="html">
+        <source>Amount Total</source>
+        <target>Amount total</target>
+      </trans-unit>        
+      <trans-unit id="global.agent" datatype="html">
+        <source>Agent</source>
+        <target>Agent</target>
+      </trans-unit> 
+      <trans-unit id="global.username" datatype="html">
+        <source>Username</source>
+        <target>Username</target>
+      </trans-unit> 
+      <trans-unit id="global.roles" datatype="html">
+        <source>Roles</source>
+        <target>Roles</target>
+      </trans-unit> 
+      <trans-unit id="global.accountant" datatype="html">
+        <source>Accountant</source>
+        <target>Accountant</target>
+      </trans-unit>
+      <trans-unit id="input.placeholder.name" datatype="html">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>        
+      <trans-unit id="input.placeholder.agent" datatype="html">
+        <source>Agent</source>
+        <target>Agent</target>
+      </trans-unit>        
+      <trans-unit id="input.placeholder.amount" datatype="html">
+        <source>amount</source>
+        <target>amount</target>
+      </trans-unit>
+      <trans-unit id="input.placeholder.city.income" datatype="html">
+        <source>income</source>
+        <target>income</target>
+      </trans-unit>     
+      <trans-unit id="input.placeholder.email" datatype="html">
+        <source>email</source>
+        <target>email</target>
+      </trans-unit>      
+      <trans-unit id="global.confirmDelete" datatype="html">
+        <source>Are you sure to delete ?</source>
+        <target>Are you sure to delete ?</target>
       </trans-unit>
     </body>
   </file>

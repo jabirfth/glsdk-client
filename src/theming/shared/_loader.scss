@@ -1,0 +1,13 @@
+.AppLoader {
+  @extend %l-flexContainer;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  img {
+    width: 60%;
+  }
+}
+

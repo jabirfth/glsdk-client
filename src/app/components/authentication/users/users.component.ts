@@ -9,7 +9,7 @@ import { User } from 'app/shared/sdk';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css'],
+  styleUrls: ['./users.component.scss'],
   providers: [UserDataSource],
 })
 export class UsersComponent implements OnInit {
@@ -29,7 +29,7 @@ export class UsersComponent implements OnInit {
   constructor(
     private userService: UserService,
     private csvExportService: CsvExportService,
-    private dataSource: UserDataSource,
+    public dataSource: UserDataSource,
     public adminGuard: AdminGuard,
   ) {
   }

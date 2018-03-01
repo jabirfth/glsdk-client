@@ -1,0 +1,126 @@
+/* Sample of another Palette for Clever Age color */
+/* generated via http://mcg.mbitson.com/ */
+
+$ca-forge: (
+  50 : #beebff,
+  100 : #72d4ff,
+  200 : #3ac3ff,
+  300 : #00a7f1,
+  400 : #0092d3,
+  500 : #007db4,
+  600 : #006895,
+  700 : #005277,
+  800 : #003d58,
+  900 : #00283a,
+  A100 : #b4e8ff,
+  A200 : #4ec9ff,
+  A400 : #00a0e7,
+  A700 : #008fcd,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$ca-garden: (
+  50 : #dbf5a5,
+  100 : #bfee60,
+  200 : #aae92d,
+  300 : #83ba14,
+  400 : #6f9f11,
+  500 : #5c830e,
+  600 : #49670b,
+  700 : #354c08,
+  800 : #223005,
+  900 : #0e1402,
+  A100 : #daff91,
+  A200 : #b8ff2b,
+  A400 : #81c004,
+  A700 : #6e9e0c,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  )
+);
+
+$ca-presence: (
+  50 : #ffe6df,
+  100 : #ffac93,
+  200 : #ff805b,
+  300 : #ff4913,
+  400 : #f43800,
+  500 : #d53100,
+  600 : #b62a00,
+  700 : #982300,
+  800 : #791c00,
+  900 : #5b1500,
+  A100 : #ffdfd5,
+  A200 : #ff906f,
+  A400 : #ff4209,
+  A700 : #ee3700,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+// Puisque le projet utilise des couleurs spécifiques (voir le thème grandlyon),
+// il est obligatoire de les déclarer également ici sous peine de lever des
+// exceptions lors de l'usage de la fonction `mat-color()`.
+//
+// Dans l'exemple qui suit, la couleur spécifique "form" est utilisée :
+//
+//     .form-container {
+//       background-color: mat-color($background, form);
+//     }
+
+// Palette des couleurs d'arrière plan spécifique au thème clair.
+$ca-light-theme-background: (
+  // spécifiques
+  actived-navigation: #f0f0f0,
+  form: rgba(220, 220, 220, 0.4),
+  table-header: #d3d3d3,
+);
+
+// Palette des couleurs de premier plan spécifique au thème clair.
+$ca-light-theme-foreground: (
+  // spécifiques
+  valid:   #4caf50,
+  invalid: #d32f2f,
+);

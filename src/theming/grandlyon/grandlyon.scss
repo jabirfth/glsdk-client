@@ -1,0 +1,10 @@
+@import '../theming';
+
+@import "config/variables";
+
+$gl-theme: app-override-theme(
+  mat-light-theme($gl-theme-primary, $gl-theme-accent, $gl-theme-warn),
+  $foreground: $gl-light-theme-foreground,
+  $background: $gl-light-theme-background
+);
+

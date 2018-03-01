@@ -1,0 +1,8 @@
+@import "palette";
+
+// Palettes
+// --------
+
+$ca-theme-primary: mat-palette($ca-forge);
+$ca-theme-accent:  mat-palette($ca-garden);
+$ca-theme-warn:    mat-palette($ca-presence);
