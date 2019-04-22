@@ -1,8 +1,7 @@
 import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
-import { Observable } from 'rxjs/Observable';
 
 export abstract class MatTableDataSource<T, U> implements DataSource<T> {
 
@@ -49,7 +48,7 @@ export abstract class MatTableDataSource<T, U> implements DataSource<T> {
     if (this.sorter && this.sorter.direction) {
       order = `${this.sorter.active} ${this.sorter.direction}`;
     }
-    this.pageFilter = Object.assign({}, this.pageFilter,{
+    this.pageFilter = Object.assign({}, this.pageFilter, {
       offset,
       limit,
       order,

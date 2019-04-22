@@ -1,3 +1,5 @@
+
+import { switchMap, filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../../../shared/sdk/models';
 import { OrderService } from '../../../services/order.service';
@@ -18,9 +20,9 @@ export class OrderFormComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.paramMap
-      .filter((paramMap: ParamMap) => paramMap.get('id') !== null)
-      .switchMap((paramMap: ParamMap) => this.orderService.findById(paramMap.get('id')))
+    this.route.paramMap.pipe(
+      filter((paramMap: ParamMap) => paramMap.get('id') !== null),
+      switchMap((paramMap: ParamMap) => this.orderService.findById(paramMap.get('id'))))
       .subscribe((order: Order) => {
         this.order = order;
       });

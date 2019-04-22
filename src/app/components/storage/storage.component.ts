@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { StorageService } from '../../services/storage.service';
 import { StorageContainer } from '../../shared/sdk/models/StorageContainer';
 

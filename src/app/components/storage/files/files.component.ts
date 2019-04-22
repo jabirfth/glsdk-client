@@ -1,7 +1,8 @@
+
+import { of as observableOf,  Observable } from 'rxjs';
 import { Component, Input, OnInit } from '@angular/core';
 import { StorageService } from '../../../services/storage.service';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/of';
+
 import { StorageFile } from '../../../models/storage-file';
 import { StorageContainer } from '../../../shared/sdk/models/StorageContainer';
 import { saveAs } from 'file-saver';
@@ -32,7 +33,7 @@ export class FilesComponent implements OnInit {
     if (this._container) {
       this.files = this.storageService.getContainerFiles(this._container);
     } else {
-      this.files = Observable.of([]);
+      this.files = observableOf([]);
     }
   }
 

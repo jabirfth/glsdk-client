@@ -1,9 +1,10 @@
-import { LdapLoginService } from './ldap-login.service';
-import { async, getTestBed, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { async, getTestBed, TestBed } from '@angular/core/testing';
+
 import { environment } from '../../environments/environment';
 import { SDKToken } from '../shared/sdk/models/BaseModels';
+import { LdapLoginService } from './ldap-login.service';
 
 describe('LdapLoginService', () => {
 

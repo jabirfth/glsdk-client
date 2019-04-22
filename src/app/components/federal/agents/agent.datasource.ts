@@ -1,8 +1,7 @@
 import { Agent } from '../../../shared/sdk/models/Agent';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject ,  Observable } from 'rxjs';
 import { AgentService } from '../../../services/agent.service';
 import { MatPaginator, MatSort } from '@angular/material';
-import { Observable } from 'rxjs/Observable';
 import { DataSource } from '@angular/cdk/collections';
 
 export class AgentDataSource implements DataSource<Agent> {

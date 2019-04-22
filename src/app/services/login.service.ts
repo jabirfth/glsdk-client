@@ -1,4 +1,5 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+
 import { SDKToken } from '../shared/sdk/models/BaseModels';
 
 export interface LoginService {

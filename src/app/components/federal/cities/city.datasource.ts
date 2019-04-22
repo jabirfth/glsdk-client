@@ -1,5 +1,5 @@
 import { CityService } from '../../../services/city.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { City } from '../../../shared/sdk/models/City';
 import { LoopBackFilter } from '../../../shared/sdk/models/BaseModels';
 import { Injectable } from '@angular/core';

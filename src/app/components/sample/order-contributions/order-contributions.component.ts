@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OrderService } from '../../../services/order.service';
 import { OrderContribution } from '../../../shared/sdk/models/OrderContribution';
-import 'rxjs/add/operator/switchMap';
+
 import { Order } from '../../../shared/sdk/models';
 import { MatPaginator, MatSort } from '@angular/material';
 import { OrderContributionDatasource } from './order-contribution.datasource';

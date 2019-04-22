@@ -1,6 +1,5 @@
-import 'rxjs/add/observable/of';
 import { ActivatedRoute, convertToParamMap, ParamMap } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { of as observableOf, Observable } from 'rxjs';
 import { CityComponent } from './city.component';
 import { CityService } from '../../../services/city.service';
 import { City } from 'app/shared/sdk';
@@ -42,7 +41,7 @@ describe('CityComponent', () => {
         },
       } as ActivatedRoute;
       cityServiceMock = jasmine.createSpyObj('cityService', {
-        getCityByCode: Observable.of(city),
+        getCityByCode: observableOf(city),
       });
       component = new CityComponent(activatedRouteMock, cityServiceMock);
     });
@@ -50,7 +49,7 @@ describe('CityComponent', () => {
     it('should get city ID in path and get city details from service', () => {
       // Given
       const paramMapSpy = spyOnProperty(activatedRouteMock, 'paramMap', 'get').and
-        .returnValue(Observable.of(convertToParamMap({ code: cityCode })));
+        .returnValue(observableOf(convertToParamMap({ code: cityCode })));
 
       // When
       component.ngOnInit();
@@ -97,7 +96,7 @@ describe('CityComponent', () => {
             provide: CityService,
             useValue: {
               getCityByCode(): Observable<City> {
-                return Observable.of(city);
+                return observableOf(city);
               },
             },
           },

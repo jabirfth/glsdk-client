@@ -1,9 +1,10 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
-import {
-  AuthorizationProvider,
-  AuthorizationService,
-} from '../../../services/authorization.service';
 import { Router } from '@angular/router';
+
+import {
+    AuthorizationProvider, AuthorizationService,
+} from '../../../services/authorization.service';
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,7 @@ export class LoginComponent {
         () => {
           this.router.navigate(['/']);
         },
-        (err: Error) => {
+        (err: HttpErrorResponse) => {
           this.errorMessage = err.message;
           this.submitDisabled = false;
         },

@@ -1,5 +1,3 @@
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/of';
 import { BytesPipe } from './bytes.pipe';
 
 describe('BytesPipe', () => {

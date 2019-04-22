@@ -1,8 +1,9 @@
-import { Observable } from 'rxjs/Observable';
-import { RoadApi } from '../shared/sdk/services/custom/Road';
-import { CityApi } from '../shared/sdk/services/custom/City';
-import { RoadService } from './road.service';
+import { of as observableOf } from 'rxjs';
+
 import { Road } from '../shared/sdk/models/Road';
+import { CityApi } from '../shared/sdk/services/custom/City';
+import { RoadApi } from '../shared/sdk/services/custom/Road';
+import { RoadService } from './road.service';
 
 const roads = [
   {
@@ -31,9 +32,9 @@ describe('RoadService', () => {
 
   beforeEach(() => {
     roadApiMock = jasmine.createSpyObj('RoadApi', {
-      find: Observable.of(roads),
-      count: Observable.of({ count: roads.length }),
-      deleteById: Observable.of(null),
+      find: observableOf(roads),
+      count: observableOf({ count: roads.length }),
+      deleteById: observableOf(null),
     });
     cityApiMock = jasmine.createSpyObj('CityApi', {
       getRoads: null,

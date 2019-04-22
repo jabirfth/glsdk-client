@@ -1,19 +1,12 @@
-/* tslint:disable */
-import { Injectable, Inject, Optional } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { SDKModels } from './SDKModels';
-import { BaseLoopBackApi } from '../core/base.service';
-import { LoopBackConfig } from '../../lb.config';
-import { LoopBackAuth } from '../core/auth.service';
-import { LoopBackFilter,  } from '../../models/BaseModels';
-import { JSONSearchParams } from '../core/search.params';
-import { ErrorHandler } from '../core/error.service';
-import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Rx';
-import { OrderContribution } from '../../models/OrderContribution';
-import { Order } from '../../models/Order';
-import { Agent } from '../../models/Agent';
+import { Observable } from 'rxjs';
 
+import { HttpClient } from '@angular/common/http';
+import { Inject, Injectable, Optional } from '@angular/core';
+
+import { LoopBackConfig } from '../../lb.config';
+import { BaseLoopBackApi } from '../core/base.service';
+import { ErrorHandler } from '../core/error.service';
+import { SDKModels } from './SDKModels';
 
 /**
  * Api services for the `OrderContribution` model.
@@ -22,13 +15,11 @@ import { Agent } from '../../models/Agent';
 export class OrderContributionApi extends BaseLoopBackApi {
 
   constructor(
-    @Inject(Http) protected http: Http,
+    @Inject(HttpClient) protected http: HttpClient,
     @Inject(SDKModels) protected models: SDKModels,
-    @Inject(LoopBackAuth) protected auth: LoopBackAuth,
-    @Inject(JSONSearchParams) protected searchParams: JSONSearchParams,
     @Optional() @Inject(ErrorHandler) protected errorHandler: ErrorHandler
   ) {
-    super(http,  models, auth, searchParams, errorHandler);
+    super(http,  models, errorHandler);
   }
 
   /**

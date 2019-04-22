@@ -1,10 +1,10 @@
 
+import { switchMap, filter } from 'rxjs/operators';
+
 import { Component, OnInit } from '@angular/core';
 import { RoadService } from '../../../services/road.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Road } from '../../../shared/sdk/models/Road';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-road-form',
@@ -25,9 +25,9 @@ export class RoadFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.paramMap
-      .filter((paramMap: ParamMap) => paramMap.get('id') !== null)
-      .switchMap((paramMap: ParamMap) => this.roadService.getRoadById(paramMap.get('id')))
+    this.route.paramMap.pipe(
+      filter((paramMap: ParamMap) => paramMap.get('id') !== null),
+      switchMap((paramMap: ParamMap) => this.roadService.getRoadById(paramMap.get('id'))))
       .subscribe((road: Road) => {
         this.road = road;
         this.isCreate = false;

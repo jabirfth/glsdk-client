@@ -3,7 +3,7 @@ import { Order, OrderContribution } from '../../../shared/sdk/models';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OrderService } from '../../../services/order.service';
 import { AgentService } from 'app/services/agent.service';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 import { Agent } from 'app/shared/sdk';
 
 @Component({
@@ -39,7 +39,7 @@ export class OrderContributionsFormComponent implements OnInit {
   }
 
   displayAgentValue(agent: Agent): string {
-    return agent ? (agent.id + ' ' + agent.firstName + ' ' + agent.lastName) : null;
+    return agent ? (`${agent.id} ${agent.firstName} ${agent.lastName}`) : null;
   }
 
   validateAgentControl(): void {

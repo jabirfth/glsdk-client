@@ -1,8 +1,11 @@
-import { CityApi } from '../shared/sdk/services/custom/City';
-import { Observable } from 'rxjs/Observable';
-import { City } from '../shared/sdk/models/City';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { Injectable } from '@angular/core';
+
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
+import { City } from '../shared/sdk/models/City';
+import { CityApi } from '../shared/sdk/services/custom/City';
 
 @Injectable()
 export class CityService {
@@ -16,7 +19,7 @@ export class CityService {
 
   countCities(where): Observable<number> {
     return this.cityApi.count(where)
-      .map(result => result.count);
+      .pipe(map(result => result.count));
   }
 
   getCityByCode(code: string): Observable<City> {

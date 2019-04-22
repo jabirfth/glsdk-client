@@ -1,7 +1,10 @@
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { BaseLoopBackApi } from '../shared/sdk/services/core/base.service';
+
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
+import { BaseLoopBackApi } from '../shared/sdk/services/core/base.service';
 
 @Injectable()
 export abstract class BaseService<T> {
@@ -22,7 +25,7 @@ export abstract class BaseService<T> {
 
   count(where): Observable<number> {
     return this.api.count(where)
-      .map(result => result.count);
+      .pipe(map(result => result.count));
   }
 
   replaceOrCreate(data): Observable<T> {

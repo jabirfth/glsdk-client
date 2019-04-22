@@ -1,9 +1,11 @@
-import { CityService } from './city.service';
 import { Angular2Csv } from 'angular2-csv';
+
 import { Injectable } from '@angular/core';
+
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
-import { RoadService } from './road.service';
+import { CityService } from './city.service';
 import { DepartmentService } from './department.service';
+import { RoadService } from './road.service';
 import { UserService } from './user.service';
 
 @Injectable()
@@ -21,7 +23,7 @@ export class CsvExportService {
     const exportFilter = Object.assign({}, filter, { limit: null, offset: null, skip: null });
     this.cityService.getCities(exportFilter).subscribe((cities) => {
       new Angular2Csv(cities, 'cities', {
-        headers: ['Code', 'Name','NameMin', 'Postal Code', 'Mayor', 'Inhabitants', 'Income'],
+        headers: ['Code', 'Name', 'NameMin', 'Postal Code', 'Mayor', 'Inhabitants', 'Income'],
         fieldSeparator: ';',
       });
     });

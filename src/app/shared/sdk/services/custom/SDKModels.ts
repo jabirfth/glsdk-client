@@ -1,17 +1,17 @@
-/* tslint:disable */
 import { Injectable } from '@angular/core';
-import { User } from '../../models/User';
-import { RoleMapping } from '../../models/RoleMapping';
-import { Role } from '../../models/Role';
-import { City } from '../../models/City';
-import { AgentRank } from '../../models/AgentRank';
-import { Road } from '../../models/Road';
+
 import { Agent } from '../../models/Agent';
-import { Department } from '../../models/Department';
-import { StorageContainer } from '../../models/StorageContainer';
 import { AgentAssignment } from '../../models/AgentAssignment';
+import { AgentRank } from '../../models/AgentRank';
+import { City } from '../../models/City';
+import { Department } from '../../models/Department';
 import { Order } from '../../models/Order';
 import { OrderContribution } from '../../models/OrderContribution';
+import { Road } from '../../models/Road';
+import { Role } from '../../models/Role';
+import { RoleMapping } from '../../models/RoleMapping';
+import { StorageContainer } from '../../models/StorageContainer';
+import { User } from '../../models/User';
 
 export interface Models { [name: string]: any }
 

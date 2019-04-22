@@ -15,7 +15,6 @@ export class BytesPipe implements PipeTransform {
     TB: { max: Number.MAX_SAFE_INTEGER, prev: 'GB' },
   };
 
-
   transform (input: any, decimal = 2, from: ByteUnit = 'B'): any {
     let bytes = input;
     let unit = from;

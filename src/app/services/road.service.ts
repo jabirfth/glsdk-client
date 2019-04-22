@@ -1,11 +1,13 @@
+import { Observable, Subject } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+
 import { Injectable } from '@angular/core';
-import { City } from '../shared/sdk/models/City';
-import { Observable } from 'rxjs/Observable';
-import { Road } from '../shared/sdk/models/Road';
-import { RoadApi } from '../shared/sdk/services/custom/Road';
-import { CityApi } from '../shared/sdk/services/custom/City';
+
 import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
-import { Subject } from 'rxjs/Subject';
+import { City } from '../shared/sdk/models/City';
+import { Road } from '../shared/sdk/models/Road';
+import { CityApi } from '../shared/sdk/services/custom/City';
+import { RoadApi } from '../shared/sdk/services/custom/Road';
 
 @Injectable()
 export class RoadService {
@@ -23,7 +25,7 @@ export class RoadService {
   }
 
   countRoads(): Observable<number> {
-    return this.roadApi.count(null).map(result => result.count);
+    return this.roadApi.count(null).pipe(map(result => result.count));
   }
 
   getRoadById(id: string): Observable<Road> {
@@ -35,8 +37,8 @@ export class RoadService {
   }
 
   countRoadsByCity(city: City): Observable<number> {
-    return this.cityApi.countRoads(city.code)
-      .map(result => result.count);
+    return this.cityApi.countRoads(city.code).pipe(
+      map(result => result.count));
   }
 
   createOrUpdateRoad(road: Road): Observable<Road> {
@@ -48,9 +50,9 @@ export class RoadService {
   }
 
   removeRoad(road: Road) {
-    return this.roadApi.deleteById(road.id)
-      .do(() => {
+    return this.roadApi.deleteById(road.id).pipe(
+      tap(() => {
         this.roadsChangeSubject.next();
-      });
+      }));
   }
 }

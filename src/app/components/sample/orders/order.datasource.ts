@@ -1,8 +1,7 @@
 import { MatPaginator, MatSort } from '@angular/material';
 import { OrderService } from '../../../services/order.service';
 import { CollectionViewer, DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable ,  BehaviorSubject } from 'rxjs';
 import { Order } from '../../../shared/sdk/models/Order';
 
 export class OrderDataSource implements DataSource<Order> {
