@@ -1,10 +1,8 @@
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/of';
-import { CityDataSource } from './city.datasource';
+import { EMPTY, of as observableOf } from 'rxjs';
+
 import { CityService } from '../../../services/city.service';
-import { MatPaginator } from '@angular/material';
-import { Observable } from 'rxjs/Observable';
 import { City } from '../../../shared/sdk/models/City';
+import { CityDataSource } from './city.datasource';
 
 describe('CityDataSource', () => {
 
@@ -25,14 +23,14 @@ describe('CityDataSource', () => {
 
   beforeEach(() => {
     cityServiceMock = jasmine.createSpyObj('cityService', {
-      getCities: Observable.of(cities),
-      countCities: Observable.of(cities.length),
+      getCities: observableOf(cities),
+      countCities: observableOf(cities.length),
     });
     paginator = {
-      page: Observable.empty(),
+      page: EMPTY,
       pageIndex: 0,
       pageSize: 10,
-    } as MatPaginator;
+    };
     dataSource = new CityDataSource(cityServiceMock);
   });
 

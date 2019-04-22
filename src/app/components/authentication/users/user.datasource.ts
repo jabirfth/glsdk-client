@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { UserService } from '../../../services/user.service';
 import { User } from '../../../shared/sdk/models/User';
 import { LoopBackFilter } from '../../../shared/sdk/models/BaseModels';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class UserDataSource extends MatTableDataSource<User, UserCriteria> {

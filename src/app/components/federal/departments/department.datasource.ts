@@ -1,8 +1,7 @@
 import { MatPaginator, MatSort } from '@angular/material';
 import { DepartmentService } from '../../../services/department.service';
 import { CollectionViewer, DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable ,  BehaviorSubject } from 'rxjs';
 import { Department } from '../../../shared/sdk/models/Department';
 import { LoopBackFilter } from '../../../shared/sdk/models/BaseModels';
 

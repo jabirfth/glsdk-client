@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { StorageService } from '../../../services/storage.service';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { StorageContainer } from '../../../shared/sdk/models/StorageContainer';
 
 @Component({

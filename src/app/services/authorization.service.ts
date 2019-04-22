@@ -1,21 +1,19 @@
-import { Injectable } from '@angular/core';
 import { CookieService } from 'angular2-cookie/core';
-import { UserApi } from '../shared/sdk/services/custom/User';
-import { LoopBackAuth } from '../shared/sdk/services/core/auth.service';
-import { User } from '../shared/sdk/models/User';
-import { Router } from '@angular/router';
+import { Observable, ReplaySubject } from 'rxjs';
+import { catchError, switchMap, tap } from 'rxjs/operators';
+
 import { HttpErrorResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { FranceConnectLoginService } from './france-connect-login.service';
-import { LoginService } from './login.service';
-import { LdapLoginService } from './ldap-login.service';
-import { DatabaseLoginService } from './bdd-login.service';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { SDKToken } from '../shared/sdk/models/BaseModels';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/switchMap';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/fromPromise';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { User } from '../shared/sdk/models/User';
+import { LoopBackAuth } from '../shared/sdk/services/core/auth.service';
+import { UserApi } from '../shared/sdk/services/custom/User';
+import { DatabaseLoginService } from './bdd-login.service';
+import { FranceConnectLoginService } from './france-connect-login.service';
+import { LdapLoginService } from './ldap-login.service';
+import { LoginService } from './login.service';
 
 const accessTokenCookieKey = 'access_token';
 const userIdCookieKey = 'userId';
@@ -64,19 +62,19 @@ export class AuthorizationService {
   }
 
   login(provider: AuthorizationProvider, username?: string, password?: string): Observable<User> {
-    return this.resolveProviderLoginService(provider).login(username, password)
-      .catch((error: HttpErrorResponse): Observable<User> => {
+    return this.resolveProviderLoginService(provider).login(username, password).pipe(
+      catchError((error: HttpErrorResponse): Observable<User> => {
         const message = error.status === 401 ?
           'Authentication failed' : `Unexpected error: ${error.message}`;
         throw new Error(message);
-      })
-      .do((token: SDKToken) => this.initLoopbackAuthToken(token.id, token.userId))
-      .switchMap(() => this.loadUser());
+      }),
+      tap((token: SDKToken) => this.initLoopbackAuthToken(token.id, token.userId)),
+      switchMap(() => this.loadUser()));
   }
 
   logout(): void {
-    this.userApi.logout()
-      .do(() => this.currentUser.next(null))
+    this.userApi.logout().pipe(
+      tap(() => this.currentUser.next(null)))
       .subscribe({
         complete: () => {
           this.router.navigate(['/login']);
@@ -106,12 +104,14 @@ export class AuthorizationService {
 
   private loadUser(): Observable<User> {
     return this.userApi.getCurrent({ include: ['roles'] })
-      .catch((error: HttpErrorResponse): Observable<User> => {
+    .pipe(
+      catchError((error: HttpErrorResponse): Observable<User> => {
         this.logout();
         throw error;
-      })
-      .do(user => this.loopBackAuth.setUser(user))
-      .do(user => this.currentUser.next(user));
+      }),
+      tap(user => this.loopBackAuth.setUser(user)),
+      tap(user => this.currentUser.next(user)),
+    );
   }
 
 }

@@ -1,8 +1,11 @@
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+
+import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
 import { Department } from '../shared/sdk/models/Department';
 import { DepartmentApi } from '../shared/sdk/services/custom/Department';
-import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
 
 @Injectable()
 export class DepartmentService {
@@ -18,7 +21,7 @@ export class DepartmentService {
 
   countDepartments(): Observable<number> {
     return this.departmentApi.count(null)
-      .map(result => result.count);
+      .pipe(map(result => result.count));
   }
 
   searchDepartments(expression: string, limit?: number): Observable<Department[]> {

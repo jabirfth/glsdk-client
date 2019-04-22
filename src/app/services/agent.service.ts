@@ -1,12 +1,13 @@
+import { Observable, Subject } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+
 import { Injectable } from '@angular/core';
-import { AgentApi } from '../shared/sdk/services/custom/Agent';
-import { Observable } from 'rxjs/Observable';
+
 import { Agent } from '../shared/sdk/models/Agent';
-import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
 import { AgentAssignment } from '../shared/sdk/models/AgentAssignment';
+import { LoopBackFilter } from '../shared/sdk/models/BaseModels';
+import { AgentApi } from '../shared/sdk/services/custom/Agent';
 import { AgentAssignmentApi } from '../shared/sdk/services/custom/AgentAssignment';
-import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/operator/do';
 
 @Injectable()
 export class AgentService {
@@ -26,7 +27,7 @@ export class AgentService {
 
   countAgents(): Observable<number> {
     return this.agentApi.count(null)
-      .map(result => result.count);
+      .pipe(map(result => result.count));
   }
 
   getAgentById(agentId: string): Observable<Agent> {
@@ -55,18 +56,18 @@ export class AgentService {
   }
 
   countAgentAssignments(agent: Agent): Observable<number> {
-    return this.agentApi.countAssignments(agent.id)
-      .map(result => result.count);
+    return this.agentApi.countAssignments(agent.id).pipe(
+      map(result => result.count));
   }
 
   createAgentAssignment(assignment: AgentAssignment): Observable<AgentAssignment> {
-    return this.agentApi.createAssignments(assignment.agentId, assignment)
-      .do(() => this.agentAssignmentsChangeSubject.next());
+    return this.agentApi.createAssignments(assignment.agentId, assignment).pipe(
+      tap(() => this.agentAssignmentsChangeSubject.next()));
   }
 
   removeAssignment(assignment: AgentAssignment): Observable<AgentAssignment> {
-    return this.agentAssignmentApi.deleteById<AgentAssignment>(assignment.id)
-      .do(() => this.agentAssignmentsChangeSubject.next());
+    return this.agentAssignmentApi.deleteById<AgentAssignment>(assignment.id).pipe(
+      tap(() => this.agentAssignmentsChangeSubject.next()));
   }
 
   get agentAssignmentsChange() {
@@ -78,9 +79,9 @@ export class AgentService {
   }
 
   removeAgent(agent: Agent) {
-    return this.agentApi.deleteById(agent.id)
-      .do(() => {
+    return this.agentApi.deleteById(agent.id).pipe(
+      tap(() => {
         this.agentsChangeSubject.next();
-      });
+      }));
   }
 }

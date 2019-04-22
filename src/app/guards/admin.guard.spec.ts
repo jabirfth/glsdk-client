@@ -1,7 +1,5 @@
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/of';
 import { AdminGuard } from './admin.guard';
-import { Observable } from 'rxjs/Observable';
+import { of as observableOf } from 'rxjs';
 
 describe('AdminGuard', () => {
 
@@ -11,7 +9,7 @@ describe('AdminGuard', () => {
       // Given
       const roles = [{ name: 'role1' }, { name: 'role2' }];
       const authorizationServiceMock = jasmine.createSpyObj('authorizationService', {
-        getCurrentUser: Observable.of({ roles }),
+        getCurrentUser: observableOf({ roles }),
       });
       const adminGuard = new AdminGuard(authorizationServiceMock);
 
@@ -29,7 +27,7 @@ describe('AdminGuard', () => {
       // Given
       const roles = [{ name: 'role1' }, { name: 'admin' }];
       const authorizationServiceMock = jasmine.createSpyObj('authorizationService', {
-        getCurrentUser: Observable.of({ roles }),
+        getCurrentUser: observableOf({ roles }),
       });
       const adminGuard = new AdminGuard(authorizationServiceMock);
 

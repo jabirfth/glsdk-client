@@ -1,15 +1,18 @@
+import { of as observableOf, throwError } from 'rxjs';
+
+import { DebugElement } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { LoginComponent } from './login.component';
 import { FormsModule } from '@angular/forms';
-import { AuthorizationProvider, AuthorizationService } from '../../../services/authorization.service';
-import { RouterTestingModule } from '@angular/router/testing';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import 'rxjs/add/observable/of';
-import { DebugElement } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppMaterialModule } from '../../../app.material.module';
+import {
+    AuthorizationProvider, AuthorizationService,
+} from '../../../services/authorization.service';
+import { LoginComponent } from './login.component';
 
 describe('LoginComponent', () => {
 
@@ -21,7 +24,7 @@ describe('LoginComponent', () => {
 
     beforeEach(() => {
       authorizationServiceMock = jasmine.createSpyObj('authorizationService', {
-        login: Observable.of(null),
+        login: observableOf(null),
       });
       routerMock = jasmine.createSpyObj('Router', {
         navigate: Promise.resolve(),
@@ -52,7 +55,7 @@ describe('LoginComponent', () => {
       const password = 'password';
       const expectedError = new Error('error');
       const expectedProvider = AuthorizationProvider.LDAP;
-      authorizationServiceMock.login = jasmine.createSpy('login').and.returnValue(Observable.throw(expectedError));
+      authorizationServiceMock.login = jasmine.createSpy('login').and.returnValue(throwError(expectedError));
       component.username = username;
       component.password = password;
 
@@ -87,7 +90,7 @@ describe('LoginComponent', () => {
         providers: [
           {
             provide: AuthorizationService,
-            useValue: { login() {} },
+            useValue: { login() { } },
           },
         ],
       }).compileComponents();

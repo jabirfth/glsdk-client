@@ -1,5 +1,3 @@
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/observable/of';
 import { AuthGuard } from './auth.guard';
 
 describe('AuthGuard', () => {

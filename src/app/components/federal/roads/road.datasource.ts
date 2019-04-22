@@ -2,8 +2,7 @@ import { City } from '../../../shared/sdk/models/City';
 import { MatPaginator, MatSort } from '@angular/material';
 import { RoadService } from '../../../services/road.service';
 import { CollectionViewer, DataSource } from '@angular/cdk/collections';
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable ,  BehaviorSubject } from 'rxjs';
 import { Road } from '../../../shared/sdk/models/Road';
 import { LoopBackFilter } from '../../../shared/sdk/models/BaseModels';
 

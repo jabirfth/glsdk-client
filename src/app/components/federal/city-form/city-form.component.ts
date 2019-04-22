@@ -1,9 +1,9 @@
+
+import { switchMap, filter } from 'rxjs/operators';
 import { Component, OnInit } from '@angular/core';
 import { CityService } from '../../../services/city.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { City } from '../../../shared/sdk/models/City';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-city-form',
@@ -29,9 +29,9 @@ export class CityFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.paramMap
-      .filter((paramMap: ParamMap) => paramMap.get('code') !== null)
-      .switchMap((paramMap: ParamMap) => this.cityService.getCityByCode(paramMap.get('code')))
+    this.route.paramMap.pipe(
+      filter((paramMap: ParamMap) => paramMap.get('code') !== null),
+      switchMap((paramMap: ParamMap) => this.cityService.getCityByCode(paramMap.get('code'))))
       .subscribe((city: City) => {
         this.city = city;
         this.isCreate = false;

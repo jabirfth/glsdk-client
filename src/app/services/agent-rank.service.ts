@@ -1,7 +1,9 @@
+import { Observable } from 'rxjs';
+
 import { Injectable } from '@angular/core';
-import { AgentRankApi } from '../shared/sdk/services/custom/AgentRank';
-import { Observable } from 'rxjs/Observable';
+
 import { AgentRank } from '../shared/sdk/models/AgentRank';
+import { AgentRankApi } from '../shared/sdk/services/custom/AgentRank';
 
 @Injectable()
 export class AgentRankService {
